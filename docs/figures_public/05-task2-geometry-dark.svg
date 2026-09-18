@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="880" height="470" fill="#1a1a19"/>
+<text x="24" y="38" fill="#ffffff" font-size="19" font-weight="600">Task 2 is four degrees of freedom, and translation costs double</text>
+<text x="24" y="63" fill="#c3c2b7" font-size="13.5">The returned 3x3 matrix maps the iOCT unit square onto microscope pixels. Verified over 1,214 snapshots: negative</text>
+<text x="24" y="82" fill="#c3c2b7" font-size="13.5">determinant in 100%, orthogonal to within 10 degrees in 100% -- a reflected similarity, not a free homography.</text>
+
+<rect x="104" y="146" width="162" height="162" fill="none" stroke="#383835" stroke-width="2"/>
+<text x="96" y="326" fill="#898781" font-size="13" text-anchor="end">(0,0)</text><text x="274" y="326" fill="#898781" font-size="13" text-anchor="start">(1,0)</text><text x="274" y="142" fill="#898781" font-size="13" text-anchor="start">(1,1)</text><text x="96" y="142" fill="#898781" font-size="13" text-anchor="end">(0,1)</text>
+<text x="185" y="227" fill="#c3c2b7" font-size="13" text-anchor="middle">iOCT</text>
+<text x="185" y="245" fill="#c3c2b7" font-size="13" text-anchor="middle">unit square</text>
+
+<line x1="296" y1="227" x2="392" y2="227" stroke="#383835" stroke-width="2"/>
+<polygon points="392,227 382,222 382,232" fill="#383835"/>
+<text x="344" y="214" fill="#ffffff" font-size="13" font-weight="600" text-anchor="middle">M (3x3)</text>
+<text x="344" y="250" fill="#898781" font-size="12" text-anchor="middle">scale, rotation,</text>
+<text x="344" y="266" fill="#898781" font-size="12" text-anchor="middle">reflection, translation</text>
+
+<rect x="430" y="116" width="340" height="250" fill="none" stroke="#383835" stroke-width="2"/>
+<text x="760" y="136" fill="#898781" font-size="12" text-anchor="end">microscope image, 1024 x 1024 px</text>
+<line x1="507.6" y1="273.5" x2="506.9" y2="272.3" stroke="#d03b3b" stroke-width="2.5" stroke-dasharray="5 4"/><line x1="635.5" y1="330.4" x2="634.3" y2="355.1" stroke="#d03b3b" stroke-width="2.5" stroke-dasharray="5 4"/><line x1="692.4" y1="202.5" x2="717.1" y2="227.7" stroke="#d03b3b" stroke-width="2.5" stroke-dasharray="5 4"/><line x1="564.5" y1="145.6" x2="589.7" y2="144.9" stroke="#d03b3b" stroke-width="2.5" stroke-dasharray="5 4"/>
+<polygon points="507.6,273.5 635.5,330.4 692.4,202.5 564.5,145.6" fill="none" stroke="#3987e5" stroke-width="2.5"/>
+<polygon points="506.9,272.3 634.3,355.1 717.1,227.7 589.7,144.9" fill="none" stroke="#d95926" stroke-width="2.5"/>
+<circle cx="507.6" cy="273.5" r="5" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/><circle cx="635.5" cy="330.4" r="5" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/><circle cx="692.4" cy="202.5" r="5" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/><circle cx="564.5" cy="145.6" r="5" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/><circle cx="506.9" cy="272.3" r="5" fill="#d95926" stroke="#1a1a19" stroke-width="2"/><circle cx="634.3" cy="355.1" r="5" fill="#d95926" stroke="#1a1a19" stroke-width="2"/><circle cx="717.1" cy="227.7" r="5" fill="#d95926" stroke="#1a1a19" stroke-width="2"/><circle cx="589.7" cy="144.9" r="5" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+
+<circle cx="452" cy="404" r="5" fill="#3987e5"/>
+<text x="466" y="409" fill="#c3c2b7" font-size="13">ground truth corners</text>
+<circle cx="640" cy="404" r="5" fill="#d95926"/>
+<text x="654" y="409" fill="#c3c2b7" font-size="13">predicted corners</text>
+<line x1="452" y1="432" x2="476" y2="432" stroke="#d03b3b" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="486" y="437" fill="#c3c2b7" font-size="13">score = AUC over thresholds of the mean of these four distances</text>
+<text x="24" y="452" fill="#898781" font-size="11.5">Translation moves all four corners; each linear column moves only two -- so the same error in tx,ty costs twice what it costs in scale or rotation.</text>
+</svg>
