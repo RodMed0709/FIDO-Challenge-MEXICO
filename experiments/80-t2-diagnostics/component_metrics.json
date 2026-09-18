@@ -1,0 +1,167 @@
+{
+  "fold": 0,
+  "n_cases": 248,
+  "checkpoint": "/workspace/FIDO_CHALLENGE/checkpoints/task2_fixed/model_1.pth",
+  "variants": {
+    "baseline": {
+      "n_cases": 248,
+      "mean_error": 66.2538762977085,
+      "median_error": 41.45073426371088,
+      "auc": 0.004765395894428152,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 40.09149864814392,
+          "median_error": 34.045302443910764,
+          "auc": 0.006458022851465475
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 139.911031834175,
+          "median_error": 110.48745507820173,
+          "auc": 0.0
+        }
+      }
+    },
+    "gt_position": {
+      "n_cases": 248,
+      "mean_error": 22.802950268610637,
+      "median_error": 19.673436984605893,
+      "auc": 0.048020527859237536,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 20.82347745089236,
+          "median_error": 18.237865729138335,
+          "auc": 0.051664182811723795
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 28.375927586186712,
+          "median_error": 22.79881644821672,
+          "auc": 0.03776223776223776
+        }
+      }
+    },
+    "gt_rotation": {
+      "n_cases": 248,
+      "mean_error": 57.94779265692915,
+      "median_error": 35.25291229628601,
+      "auc": 0.011363636363636364,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 32.60927850639876,
+          "median_error": 28.370761287231065,
+          "auc": 0.014406358668653751
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 129.28545557303778,
+          "median_error": 104.03272129658649,
+          "auc": 0.002797202797202797
+        }
+      }
+    },
+    "gt_scale": {
+      "n_cases": 248,
+      "mean_error": 62.68115086394747,
+      "median_error": 37.118487671652886,
+      "auc": 0.0186950146627566,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 35.97490184033549,
+          "median_error": 29.500748012382463,
+          "auc": 0.02533532041728763
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 137.86951349965503,
+          "median_error": 105.90187524222151,
+          "auc": 0.0
+        }
+      }
+    },
+    "gt_rotation_scale": {
+      "n_cases": 248,
+      "mean_error": 53.894664352848466,
+      "median_error": 30.987963016909696,
+      "auc": 0.03372434017595308,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 27.92407117937556,
+          "median_error": 24.28534939339744,
+          "auc": 0.04570293094883259
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 127.01187282585681,
+          "median_error": 101.23566129790198,
+          "auc": 0.0
+        }
+      }
+    },
+    "gt_position_scale": {
+      "n_cases": 248,
+      "mean_error": 18.736960178440782,
+      "median_error": 13.625417164012715,
+      "auc": 0.14589442815249265,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 16.200849861893,
+          "median_error": 12.217716492164755,
+          "auc": 0.16840536512667661
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 25.87708614656762,
+          "median_error": 21.88083368097653,
+          "auc": 0.08251748251748253
+        }
+      }
+    },
+    "gt_position_rotation": {
+      "n_cases": 248,
+      "mean_error": 10.779412917348402,
+      "median_error": 9.171633224015917,
+      "auc": 0.24156891495601168,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 11.0720344261149,
+          "median_error": 9.601617355775218,
+          "auc": 0.2260307998012916
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 9.955570823436577,
+          "median_error": 7.288414556104833,
+          "auc": 0.28531468531468535
+        }
+      }
+    },
+    "all_gt": {
+      "n_cases": 248,
+      "mean_error": 3.4817377216091723,
+      "median_error": 2.773146206338422,
+      "auc": 0.6389296187683284,
+      "per_scenario": {
+        "Scenario_09": {
+          "n_cases": 183,
+          "mean_error": 3.169976273671731,
+          "median_error": 2.6444440848511834,
+          "auc": 0.6631892697466468
+        },
+        "Scenario_10": {
+          "n_cases": 65,
+          "mean_error": 4.359466105802277,
+          "median_error": 3.3147434449426085,
+          "auc": 0.5706293706293707
+        }
+      }
+    }
+  }
+}

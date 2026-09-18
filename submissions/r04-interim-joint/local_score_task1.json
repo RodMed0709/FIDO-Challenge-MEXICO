@@ -1,0 +1,21 @@
+{
+  "scored_at": "2026-08-19T06:10:15.024633+00:00",
+  "data_root": "<repo-root>\\data\\Mock Test",
+  "results": {
+    "keypoints": {
+      "final_score": 0.625455,
+      "task1_score": 0.625455,
+      "keypoint_auc": 0.854545,
+      "distance_auc": 0.090909,
+      "duration": 4.187999999994645,
+      "num_cases": 5,
+      "timed_out": 0,
+      "cuda_available": 0,
+      "wall_seconds": 10.8,
+      "avg_case_seconds": 0.8,
+      "max_case_seconds": 1.094,
+      "per_case_limit": 20,
+      "timed_out_cases": []
+    }
+  }
+}

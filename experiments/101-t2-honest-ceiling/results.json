@@ -1,0 +1,115 @@
+{
+  "n_cases": 1214,
+  "reference_gt_rotation_pred_coefs_auc": 0.32005391642953424,
+  "reference_gt_rotation_pred_coefs_mean_error": 11.135378594413947,
+  "reference_pred_rotation_global_coefs": {
+    "per_scenario": {
+      "Scenario_01": 0.0,
+      "Scenario_02": 0.0,
+      "Scenario_03": 0.0,
+      "Scenario_04": 0.0,
+      "Scenario_05": 0.0,
+      "Scenario_06": 0.0,
+      "Scenario_07": 0.0,
+      "Scenario_08": 0.0,
+      "Scenario_09": 0.0,
+      "Scenario_10": 0.0
+    },
+    "pooled_auc": 0.0,
+    "pooled_mean_error": 123.28184204780455
+  },
+  "honest_end_to_end": {
+    "per_scenario": {
+      "Scenario_01": {
+        "n": 152,
+        "mean_error": 135.45499883389277,
+        "median_error": 124.26465922060865,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 14.101808021296895,
+        "rotation_angular_error_deg_median": 11.981238061980703
+      },
+      "Scenario_02": {
+        "n": 154,
+        "mean_error": 92.8521363803103,
+        "median_error": 83.37411602760014,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 14.274259802510045,
+        "rotation_angular_error_deg_median": 12.436599777661066
+      },
+      "Scenario_03": {
+        "n": 83,
+        "mean_error": 156.3766757835734,
+        "median_error": 155.64924135061875,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 19.651264110132956,
+        "rotation_angular_error_deg_median": 17.989632345156352
+      },
+      "Scenario_04": {
+        "n": 127,
+        "mean_error": 123.63178298007769,
+        "median_error": 112.5573285554602,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 14.955647118157835,
+        "rotation_angular_error_deg_median": 13.239027771088987
+      },
+      "Scenario_05": {
+        "n": 108,
+        "mean_error": 80.02515152355515,
+        "median_error": 65.46977895976534,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 17.42866557370541,
+        "rotation_angular_error_deg_median": 15.521773606573326
+      },
+      "Scenario_06": {
+        "n": 121,
+        "mean_error": 115.06542014954155,
+        "median_error": 93.78877662993719,
+        "auc": 0.003756574004507889,
+        "rotation_angular_error_deg_mean": 17.81011664577935,
+        "rotation_angular_error_deg_median": 16.981892410659533
+      },
+      "Scenario_07": {
+        "n": 76,
+        "mean_error": 90.22390197012247,
+        "median_error": 79.342317738431,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 14.171452993747502,
+        "rotation_angular_error_deg_median": 13.061366245811309
+      },
+      "Scenario_08": {
+        "n": 145,
+        "mean_error": 87.56189387092702,
+        "median_error": 80.9360257064325,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 16.453829830305533,
+        "rotation_angular_error_deg_median": 12.992342444719343
+      },
+      "Scenario_09": {
+        "n": 183,
+        "mean_error": 167.6641721646109,
+        "median_error": 163.40633630612155,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 20.57525550328779,
+        "rotation_angular_error_deg_median": 17.16296090351153
+      },
+      "Scenario_10": {
+        "n": 65,
+        "mean_error": 195.82973611301918,
+        "median_error": 185.3706956646829,
+        "auc": 0.0,
+        "rotation_angular_error_deg_mean": 20.533041059931268,
+        "rotation_angular_error_deg_median": 18.060476797654704
+      }
+    },
+    "pooled_auc": 0.00037441964954320803,
+    "pooled_mean_error": 122.81671257903474,
+    "pooled_median_error": 109.78242998621201,
+    "rotation_angular_error_deg_mean": 16.863433368193203,
+    "rotation_angular_error_deg_median": 14.296950863798447
+  },
+  "primary_image_feature": [
+    "profile_edge_r50"
+  ],
+  "rotation_model": "compact OCT features (33-dim, T2-96) / RandomForestRegressor(n_estimators=300, min_samples_leaf=3) -- mismo modelo ganador que T2-98 sec.1 (R2=0.4834)",
+  "notes": "honest_end_to_end usa SOLO oct_volume (features del volumen) + opmi_image (profile_edge_r50) -- ningun GT (iOCT.Rotation, coeficientes por escenario) se lee en el fold de test, en ningun paso."
+}

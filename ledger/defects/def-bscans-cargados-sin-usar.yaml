@@ -1,0 +1,15 @@
+id: def-bscans-cargados-sin-usar
+tipo: defect
+titulo: '`train_task1_keypoint` cargaba 2 B-scans + 2 máscaras que nunca usa'
+estado: cerrado
+severidad: media
+donde: src/fido/train/train_task1_keypoint.py
+sintoma: 356 KB por caso de I/O muerto.
+evidencia: Auditoría de I/O del 2026-08-17.
+impacto: I/O tirado a la basura multiplicado por época.
+afecta:
+- run-2026-08-17-p50-t1-keypoint
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: Flag `load_bscan=False`.
+historial: []

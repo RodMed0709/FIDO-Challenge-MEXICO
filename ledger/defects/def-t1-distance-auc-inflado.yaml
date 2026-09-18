@@ -1,0 +1,19 @@
+id: def-t1-distance-auc-inflado
+tipo: defect
+titulo: 'El `val_distance_auc=0.5681` está inflado: `evaluate()` descarta casos que el scorer
+  penaliza'
+estado: abierto
+severidad: alta
+donde: 'src/fido/train/train_task1_unet.py :: evaluate()'
+sintoma: '`evaluate()` salta con `continue` los casos sin OCT y aquellos donde la segmentación
+  no produce un gap medible (`NaN`). El scorer oficial no descarta nada: mete un `PENALTY_ERROR`
+  y lo cuenta en el denominador.'
+evidencia: 'Auditoría del 2026-08-17: el 9.03% de los casos tiene `dist_GT > 376.7 px`, techo
+  estructural del método con B-scans de 512 filas. Esos casos son inalcanzables por construcción
+  y hoy se descartan en vez de penalizarse.'
+impacto: El AUC real de Codabench será MENOR que 0.5681. Decidir una submission con este número
+  es decidir con un número falso.
+afecta:
+- run-2026-08-17-p10-t1-distancia
+abierto_el: '2026-08-17'
+historial: []

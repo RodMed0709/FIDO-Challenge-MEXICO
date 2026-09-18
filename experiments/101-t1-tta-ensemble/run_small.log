@@ -1,0 +1,32 @@
+[1/5] Construyendo/leyendo la lista completa de casos (GT + filtro de canula)...
+      61691 casos activos en 0.0s
+[2/5] GroupKFold por escenario (mismo split que el entrenamiento del checkpoint)...
+      train n=47292 (['Scenario_01', 'Scenario_02', 'Scenario_05', 'Scenario_06', 'Scenario_07', 'Scenario_08', 'Scenario_09', 'Scenario_10']), val n=14399 (['Scenario_03', 'Scenario_04'])
+[3/5] Triage de checkpoints candidatos (muestra pequena, solo baseline)...
+      cnn_best_ep20: keypoint_auc=0.8682 (n=20, mean_error=1.00px)
+      cnn_r01_early: keypoint_auc=0.8682 (n=20, mean_error=0.92px)
+      cnn_r04_interim: keypoint_auc=0.8636 (n=20, mean_error=0.94px)
+      checkpoints usables para ensamble: ['cnn_best_ep20', 'cnn_r01_early', 'cnn_r04_interim']
+[4/5] Muestra principal: 15 casos/escenario x 2 escenarios...
+      n=30
+      corriendo cnn_best_ep20...
+        20/30 casos (110s transcurridos)
+        30/30 casos (161s transcurridos)
+        160.5s total, 5.351s/caso (8 vistas/caso, temperature=1.000)
+      corriendo cnn_r01_early...
+        20/30 casos (101s transcurridos)
+        30/30 casos (156s transcurridos)
+        156.3s total, 5.211s/caso (8 vistas/caso, temperature=1.000)
+      corriendo cnn_r04_interim...
+        20/30 casos (109s transcurridos)
+        30/30 casos (151s transcurridos)
+        151.2s total, 5.040s/caso (8 vistas/caso, temperature=1.000)
+[5/5] Componiendo configuraciones desde las vistas ya calculadas y evaluando...
+      baseline_no_tta: auc=0.8697 mean_error=0.91px (1 forward/caso, ~0.669s/caso medidos en CPU)
+      tta_flip_rot_6way: auc=0.0061 mean_error=70.62px (6 forward/caso, ~4.013s/caso medidos en CPU)
+      tta_scale_3way: auc=0.8606 mean_error=1.02px (3 forward/caso, ~2.007s/caso medidos en CPU)
+      tta_combined_8way: auc=0.0455 mean_error=38.60px (8 forward/caso, ~5.351s/caso medidos en CPU)
+      ensemble_no_tta: auc=0.8697 mean_error=0.88px (3 forward/caso, ~1.950s/caso medidos en CPU)
+      ensemble_tta_combined: auc=0.0485 mean_error=35.19px (24 forward/caso, ~15.602s/caso medidos en CPU)
+
+Resultados escritos en experiments\101-t1-tta-ensemble\results_small.json

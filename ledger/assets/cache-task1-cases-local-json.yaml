@@ -1,0 +1,13 @@
+id: cache-task1-cases-local-json
+tipo: asset
+titulo: Lista de casos de Task 1 (disco local)
+clase: cache
+ruta: /root/data_cache/task1_cases_local.json
+host: pod:<POD_ID>
+task: 1
+componente: datos
+activo: false
+efimero: true
+existe: desconocido
+notas: Igual que el anterior pero con las rutas del disco local del contenedor.
+historial: []

@@ -1,0 +1,19 @@
+id: def-getitem-fallback-cruza-split
+tipo: defect
+titulo: El fallback de `__getitem__` puede inyectar muestras de train en validación (y colgarse
+  días)
+estado: abierto
+severidad: alta
+donde: 'src/fido/data/task1.py y task2.py :: Dataset.__getitem__'
+sintoma: 'Al fallar un caso salta a `(idx+1) % len(self.cases)` sobre el dataset COMPLETO,
+  no sobre el `Subset` del fold: durante la validación puede devolver una muestra de train.
+  Además permite ~49,000 reintentos con backoff, o sea puede colgarse días en silencio.'
+evidencia: Auditoría de código del 2026-08-17. `HANDOFF.md` §5.4.
+impacto: Contamina la validación (los números de val dejan de ser honestos) y puede quemar
+  horas de GPU sin que nadie lo note.
+afecta:
+- run-2026-08-17-p10-t1-distancia
+- run-2026-08-17-p40-t2-decodificador
+- run-2026-08-17-p50-t1-keypoint
+abierto_el: '2026-08-17'
+historial: []

@@ -1,0 +1,13 @@
+id: dec-no-hardcodear-prior-escala
+tipo: decision
+titulo: No hardcodear priors de escala en Task 2
+estado: vigente
+decision: Ningún valor de escala calibrado en train entra al modelo como constante.
+porque: Los rangos de escala de train y del Mock Test son disjuntos; un prior de train estaría
+  sesgado si el test oculto se parece al Mock Test.
+revisar_si: se resuelve la discrepancia train↔Mock Test y se entiende de dónde sale
+evidencia:
+- f-task2-escala-disjunta
+decidido_el: '2026-08-17'
+vida_util_dias: 30
+historial: []

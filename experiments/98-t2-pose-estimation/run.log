@@ -1,0 +1,79 @@
+=== Verificando hallazgo T2-98 de forma independiente ===
+n=1214 ioct_rotation_std=[0.0583 0.0917 0.0592 0.2124] eyeball_rotation_std=[0.0297 0.0035 0.0106 0.6741]
+surrogate cuadratico R2 por parametro de matriz: [0.976 0.975 0.994 0.975 0.976 0.994]
+=== Cargando cache de features OCT (de measure_task2_oct_self_localisation.py) ===
+1214 casos en cache OCT
+Extrayendo features de fundus para 1214 casos...
+[fundus 100/1214] 477.6 casos/min
+[fundus 200/1214] 475.0 casos/min
+[fundus 300/1214] 482.6 casos/min
+[fundus 400/1214] 459.1 casos/min
+[fundus 500/1214] 464.6 casos/min
+[fundus 600/1214] 470.0 casos/min
+[fundus 700/1214] 473.6 casos/min
+[fundus 800/1214] 475.7 casos/min
+[fundus 900/1214] 476.4 casos/min
+[fundus 1000/1214] 475.7 casos/min
+[fundus 1100/1214] 476.0 casos/min
+[fundus 1200/1214] 477.3 casos/min
+Features de fundus cacheadas en experiments\98-t2-pose-estimation\fundus_features_cache.npz
+=== Pregunta 1: iOCT.Rotation desde el VOLUMEN OCT ===
+[iOCT<-OCT][compact/ridge] R2_joint=0.4184 R2_comp=[0.3965, 0.3964, 0.4739, 0.4069] [0.1s]
+[iOCT<-OCT][compact/random_forest] R2_joint=0.4834 R2_comp=[0.4648, 0.5063, 0.4464, 0.5163] [5.3s]
+[iOCT<-OCT][compact/mlp] R2_joint=0.1008 R2_comp=[0.207, -0.0597, -0.0635, 0.3195] [23.8s]
+[iOCT<-OCT][full/ridge] R2_joint=0.2105 R2_comp=[0.3096, 0.1194, 0.2328, 0.18] [0.8s]
+[iOCT<-OCT][full/random_forest] R2_joint=0.4752 R2_comp=[0.4229, 0.5203, 0.4316, 0.5259] [16.4s]
+[iOCT<-OCT][full/mlp] R2_joint=-44.5190 R2_comp=[-140.3985, -13.882, -5.5474, -18.2482] [66.2s]
+[iOCT<-OCT][control shuffle compact/random_forest] R2_joint=-0.0385 (vs 0.4834 sin barajar)
+=== Pregunta 2: Eyeball.Rotation desde el FUNDUS ===
+[Eye<-Fundus][compact/ridge] R2_joint=0.0170 R2_comp=[0.642, -0.0586, -0.7323, 0.217] [0.0s]
+[Eye<-Fundus][compact/random_forest] R2_joint=0.2218 R2_comp=[0.4628, -0.0803, 0.0752, 0.4296] [5.4s]
+[Eye<-Fundus][compact/mlp] R2_joint=-823.0215 R2_comp=[-35.7514, -3010.5538, -245.8127, 0.032] [11.8s]
+[Eye<-Fundus][full/ridge] R2_joint=-0.3888 R2_comp=[0.5539, -0.3954, -1.5088, -0.2051] [0.8s]
+[Eye<-Fundus][full/random_forest] R2_joint=0.1376 R2_comp=[0.2407, -0.1607, 0.1779, 0.2924] [34.3s]
+[Eye<-Fundus][full/mlp] R2_joint=-2505.1862 R2_comp=[-116.6906, -8613.0079, -1290.2351, -0.8111] [9.9s]
+[Eye<-Fundus][control shuffle compact/random_forest] R2_joint=-0.1097 (vs 0.2218 sin barajar)
+=== Componiendo matrices via la regresion sustituta ===
+[gt_both (sanity: reproduce la matriz real via el sustituto, sin prediccion)] AUC=0.2092 mean_error=12.72px
+[pred_ioct + gt_eye (contribucion del volumen OCT sola)] AUC=0.0000 mean_error=123.01px
+[gt_ioct + pred_eye (contribucion del fundus solo)] AUC=0.1432 mean_error=29.81px
+[pred_ioct + pred_eye (todo predicho, ambas modalidades)] AUC=0.0000 mean_error=137.09px
+=== Pregunta 3: barrido de precision angular ===
+[precision sweep ambos] angulo=0.00deg AUC=0.2092 +- 0.0000
+[precision sweep ambos] angulo=0.50deg AUC=0.0892 +- 0.0027
+[precision sweep ambos] angulo=1.00deg AUC=0.0182 +- 0.0017
+[precision sweep ambos] angulo=2.00deg AUC=0.0018 +- 0.0006
+[precision sweep ambos] angulo=3.00deg AUC=0.0008 +- 0.0004
+[precision sweep ambos] angulo=5.00deg AUC=0.0000 +- 0.0000
+[precision sweep ambos] angulo=7.50deg AUC=0.0000 +- 0.0000
+[precision sweep ambos] angulo=10.00deg AUC=0.0000 +- 0.0000
+[precision sweep ambos] angulo=15.00deg AUC=0.0000 +- 0.0000
+[precision sweep ambos] angulo=20.00deg AUC=0.0000 +- 0.0000
+[precision sweep ambos] angulo=30.00deg AUC=0.0000 +- 0.0000
+[precision sweep ambos] angulo=45.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo iOCT] angulo=0.00deg AUC=0.2092 +- 0.0000
+[precision sweep solo iOCT] angulo=0.50deg AUC=0.1059 +- 0.0057
+[precision sweep solo iOCT] angulo=1.00deg AUC=0.0284 +- 0.0032
+[precision sweep solo iOCT] angulo=2.00deg AUC=0.0056 +- 0.0011
+[precision sweep solo iOCT] angulo=3.00deg AUC=0.0018 +- 0.0006
+[precision sweep solo iOCT] angulo=5.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo iOCT] angulo=7.50deg AUC=0.0000 +- 0.0000
+[precision sweep solo iOCT] angulo=10.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo iOCT] angulo=15.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo iOCT] angulo=20.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo iOCT] angulo=30.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo iOCT] angulo=45.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo ojo] angulo=0.00deg AUC=0.2092 +- 0.0000
+[precision sweep solo ojo] angulo=0.50deg AUC=0.1651 +- 0.0034
+[precision sweep solo ojo] angulo=1.00deg AUC=0.1118 +- 0.0045
+[precision sweep solo ojo] angulo=2.00deg AUC=0.0493 +- 0.0040
+[precision sweep solo ojo] angulo=3.00deg AUC=0.0266 +- 0.0046
+[precision sweep solo ojo] angulo=5.00deg AUC=0.0087 +- 0.0019
+[precision sweep solo ojo] angulo=7.50deg AUC=0.0038 +- 0.0009
+[precision sweep solo ojo] angulo=10.00deg AUC=0.0015 +- 0.0006
+[precision sweep solo ojo] angulo=15.00deg AUC=0.0002 +- 0.0002
+[precision sweep solo ojo] angulo=20.00deg AUC=0.0002 +- 0.0002
+[precision sweep solo ojo] angulo=30.00deg AUC=0.0000 +- 0.0000
+[precision sweep solo ojo] angulo=45.00deg AUC=0.0000 +- 0.0000
+Resultados crudos en experiments\98-t2-pose-estimation\results.json
+Informe de pose escrito en experiments\98-t2-pose-estimation\INFORME.md

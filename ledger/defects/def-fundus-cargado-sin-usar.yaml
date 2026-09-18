@@ -1,0 +1,15 @@
+id: def-fundus-cargado-sin-usar
+tipo: defect
+titulo: '`Task1Dataset` cargaba el fundus que `train_task1_unet` nunca usa'
+estado: cerrado
+severidad: media
+donde: src/fido/data/task1.py
+sintoma: 699 KB por caso convertidos en un tensor float32 de 12 MB, nunca consumidos.
+evidencia: 'Auditoría de I/O del 2026-08-17: 38% del I/O total y ~100 MB por batch de IPC.'
+impacto: Multiplicado por el número de épocas, horas de GPU ociosa esperando disco.
+afecta:
+- run-2026-08-17-p10-t1-distancia
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: Flag `load_fundus=False`.
+historial: []

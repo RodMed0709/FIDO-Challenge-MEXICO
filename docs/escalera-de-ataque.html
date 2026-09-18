@@ -1,0 +1,264 @@
+<title>Escalera de ataque FIDO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --fundus:#B4491C; --fundus-soft:#EBD8CE;
+  --oct:#2F5D70;    --oct-soft:#D6E2E7;
+  --ground:#FCFAF7; --surface:#FFFFFF; --raised:#F5F0EA;
+  --ink:#1C1512;    --muted:#6E635B;   --line:#E2D9D0;
+  --live:#3E7A56;   --live-bg:#DFEBE3;
+  --warn:#9A6B0F;   --warn-bg:#F3E7CD;
+  --dead:#98302A;   --dead-bg:#F2DBD8;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --fundus:#E0784A; --fundus-soft:#40261B;
+    --oct:#7FB3C6;    --oct-soft:#1B2E36;
+    --ground:#131010; --surface:#1C1817; --raised:#252020;
+    --ink:#F2ECE6;    --muted:#A2958C;   --line:#332B28;
+    --live:#79BA93;   --live-bg:#1B2E23;
+    --warn:#D9A544;   --warn-bg:#332813;
+    --dead:#E0736A;   --dead-bg:#361C1A;
+  }
+}
+:root[data-theme="dark"]{
+  --fundus:#E0784A; --fundus-soft:#40261B;
+  --oct:#7FB3C6;    --oct-soft:#1B2E36;
+  --ground:#131010; --surface:#1C1817; --raised:#252020;
+  --ink:#F2ECE6;    --muted:#A2958C;   --line:#332B28;
+  --live:#79BA93;   --live-bg:#1B2E23;
+  --warn:#D9A544;   --warn-bg:#332813;
+  --dead:#E0736A;   --dead-bg:#361C1A;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1000px; margin:0 auto; padding:56px 28px 96px}
+h1,h2,h3{font-family:"Fraunces","Iowan Old Style",Georgia,serif; text-wrap:balance; margin:0}
+h1{font-size:clamp(2.1rem,5vw,3.1rem); font-weight:600; letter-spacing:-.015em; line-height:1.08}
+h2{font-size:1.4rem; font-weight:600}
+h3{font-size:1.08rem; font-weight:600}
+p{margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+.eyebrow{font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+
+header{display:flex; flex-direction:column; gap:16px; padding-bottom:30px; border-bottom:2px solid var(--ink)}
+.sub{color:var(--muted); max-width:66ch; font-size:1.05rem}
+
+/* premisa */
+.premise{background:var(--raised); border-left:3px solid var(--fundus); padding:22px 24px; margin:34px 0 8px; display:grid; gap:10px}
+.premise h3{color:var(--fundus)}
+.premise p{font-size:.96rem; max-width:72ch}
+
+/* carriles */
+.tier{margin-top:46px}
+.tier-head{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; padding-bottom:11px; border-bottom:1px solid var(--line); margin-bottom:6px}
+.tier-tag{
+  font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:.82rem;
+  letter-spacing:.05em; padding:4px 10px; color:var(--surface);
+}
+.t0 .tier-tag{background:var(--fundus)}
+.t1 .tier-tag{background:var(--oct)}
+.t2 .tier-tag{background:var(--muted)}
+.tier-when{margin-left:auto; font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--muted)}
+
+.step{
+  background:var(--surface); border:1px solid var(--line); border-top:none;
+  padding:22px 24px; display:grid; gap:11px;
+}
+.tier .step:first-of-type{border-top:1px solid var(--line)}
+.step-top{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.step-id{font-family:"IBM Plex Mono",monospace; font-size:.78rem; font-weight:600; color:var(--muted)}
+.step p{font-size:.95rem; max-width:74ch}
+.why{color:var(--muted)}
+
+.hyps{display:grid; gap:9px; margin-top:2px}
+.hyp{display:grid; grid-template-columns:auto 1fr; gap:4px 13px; padding:11px 14px; background:var(--raised); font-size:.9rem}
+.hyp .hid{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--oct); font-size:.8rem}
+.hyp .hb{color:var(--muted); grid-column:2}
+.hyp code{font-family:"IBM Plex Mono",monospace; font-size:.87em; background:var(--surface); padding:1px 5px}
+
+.meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:4px}
+.tag{font-family:"IBM Plex Mono",monospace; font-size:.68rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:4px 9px; border-radius:999px}
+.tag.free{background:var(--live-bg); color:var(--live)}
+.tag.gpu{background:var(--warn-bg); color:var(--warn)}
+.tag.gate{background:var(--oct-soft); color:var(--oct)}
+
+/* tabla */
+.tw{overflow-x:auto; border:1px solid var(--line); background:var(--surface); margin-top:4px}
+table{border-collapse:collapse; width:100%; min-width:520px}
+th,td{padding:11px 15px; text-align:left; border-bottom:1px solid var(--line); font-size:.9rem}
+th{font-family:"IBM Plex Mono",monospace; font-size:.7rem; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); font-weight:500; background:var(--raised)}
+tbody tr:last-child td{border-bottom:none}
+td.num{font-family:"IBM Plex Mono",monospace; text-align:right; font-variant-numeric:tabular-nums}
+tr.hi td{background:var(--fundus-soft); font-weight:600}
+
+/* cerrado */
+.closed{margin-top:56px}
+.closed .tw{border-color:var(--dead)}
+.closed th{background:var(--dead-bg); color:var(--dead)}
+.closed td:first-child{font-weight:600}
+
+.rules{margin-top:52px; background:var(--oct-soft); border:1px solid var(--oct); padding:24px 26px}
+.rules h2{color:var(--oct); margin-bottom:12px}
+.rules ol{margin:0; padding-left:20px; display:grid; gap:9px}
+.rules li{font-size:.94rem}
+.rules strong{font-weight:600}
+
+.foot{margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.86rem; display:flex; flex-wrap:wrap; gap:8px 26px}
+
+@media (max-width:640px){ .wrap{padding:36px 18px 72px} .tier-when{margin-left:0; width:100%} }
+</style>
+
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">FIDO Challenge · MICCAI 2026 · plan del 19 ago 2026</p>
+  <h1>Qué hacer ahora, y en qué orden</h1>
+  <p class="sub">Sustituye a cualquier plan anterior. Se reescribió después de cerrar tres corridas, aplicar la corrección oficial de profundidad y pasar cuatro auditorías — dos de las cuales tumbaron hipótesis que ya dábamos por buenas.</p>
+</header>
+
+<div class="premise">
+  <h3>La premisa que cambia el orden de todo</h3>
+  <p>Dos equipos independientes han medido el mismo techo en el keypoint. Nosotros, con tres backbones (0.8539 / 0.8534 / 0.8005). Los organizadores, con otras tres arquitecturas (7.93–9.65 px) y una ablation que dice que su fusión multimodal <strong>no mejora el keypoint</strong> (p = 0.525).</p>
+  <p>El eje de la arquitectura está agotado. Lo que sigue abierto es la distancia — que pesa 0.3 del score y de la que cobramos 0.027 — y una brecha de 0.08 entre nuestra validación local y Codabench que <strong>nadie ha diagnosticado todavía</strong>, y que es 16× mayor que cualquier diferencia entre backbones.</p>
+</div>
+
+<!-- P0 -->
+<div class="tier t0">
+  <div class="tier-head">
+    <span class="tier-tag">P0</span><h2>Sin GPU, sin coste, empezar ya</h2>
+    <span class="tier-when">antes de encender nada</span>
+  </div>
+
+  <div class="step">
+    <div class="step-top"><span class="step-id">P0.1</span><h3>Diagnosticar la brecha local → Codabench</h3></div>
+    <p class="why">Es el mayor hueco no explicado del proyecto y no cuesta nada. Cuatro hipótesis, todas falsables con datos y código que ya tenemos.</p>
+    <div class="hyps">
+      <div class="hyp"><span class="hid">H1</span><span class="t">El 10 % sin OCT</span>
+        <span class="hb">El ingestion oficial fija <code>OCT_DROPOUT_RATE = 0.1</code>: uno de cada diez casos llega con <code>oct_volume=None</code>. Si nuestra validación no simula ese dropout, medimos un problema más fácil que el real. <strong>Es la hipótesis con más peso a priori.</strong></span></div>
+      <div class="hyp"><span class="hid">H2</span><span class="t">Fuga por escenario</span>
+        <span class="hb">Si la validación comparte escenarios con el entrenamiento, los frames son casi idénticos anatómicamente y el AUC local está inflado.</span></div>
+      <div class="hyp"><span class="hid">H3</span><span class="t">Varianza de muestra</span>
+        <span class="hb">Codabench evalúa <code>NUM_EVAL_CASES = 100</code> contra nuestros 14 399. Un bootstrap dice si la brecha cabe dentro del intervalo.</span></div>
+      <div class="hyp"><span class="hid">H4</span><span class="t">Preprocesado divergente</span>
+        <span class="hb">El pipeline de <code>inference.py</code> contra el del dataset de entrenamiento.</span></div>
+    </div>
+    <div class="meta"><span class="tag free">coste cero</span><span class="tag gate">cierra con un número por hipótesis</span></div>
+  </div>
+
+  <div class="step">
+    <div class="step-top"><span class="step-id">P0.2</span><h3>T2-R12 · la última vía viva de Task 2</h3></div>
+    <p>¿La traslación de Task 2 correlaciona con el keypoint de Task 1? Es <strong>señal no visual</strong>, y nunca se ha probado. Físicamente es plausible: el cirujano apunta el OCT donde está operando. Y la posición explica el 65.6 % del error de Task 2.</p>
+    <p class="why">Si sale, es la única forma conocida de mover Task 2 del cero. Si no sale, cierra Task 2 de forma definitiva y deja de consumir atención.</p>
+    <div class="meta"><span class="tag free">coste cero</span><span class="tag gate">GO si R² &gt; 0.30 · muere si R² &lt; 0.05</span></div>
+  </div>
+</div>
+
+<!-- P1 -->
+<div class="tier t1">
+  <div class="tier-head">
+    <span class="tier-tag">P1</span><h2>Requiere pod, retorno alto</h2>
+    <span class="tier-when">fase Competition · cierra 22 ago</span>
+  </div>
+
+  <div class="step">
+    <div class="step-top"><span class="step-id">P1.1</span><h3>Medir <span class="mono">r05</span> en Codabench</h3></div>
+    <p>Único cambio respecto a <span class="mono">r04</span>: reescalar la distancia ×1.28. El control local ya está hecho, con <span class="mono">keypoint_auc</span> idéntico en las tres corridas.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Configuración</th><th class="num">distance_auc</th><th class="num">score</th></tr></thead>
+        <tbody>
+          <tr><td><span class="mono">r04</span> · scorer viejo</td><td class="num">0.0909</td><td class="num">0.6255</td></tr>
+          <tr><td><span class="mono">r04</span> · scorer nuevo</td><td class="num">0.0000</td><td class="num">0.5982</td></tr>
+          <tr class="hi"><td><span class="mono">r05</span> · reescalado</td><td class="num">0.1333</td><td class="num">0.6382</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="why">Con el scorer corregido la predicción vieja cae a cero absoluto: reescalar era obligatorio para no retroceder. Los 5 casos del Mock confirman dirección, no magnitud — el número real de Codabench es el que decide el siguiente paso.</p>
+    <div class="meta"><span class="tag free">ya subido</span></div>
+  </div>
+
+  <div class="step">
+    <div class="step-top"><span class="step-id">P1.2</span><h3>T1-82 y T1-83 · decodificadores del heatmap</h3></div>
+    <p>Los dos están pre-registrados y llevan tiempo bloqueados esperando el checkpoint CNN limpio T1-80, <strong>que ya existe</strong>. No reentrenan nada: cambian cómo se extrae la coordenada del heatmap. T1-82 hace refinamiento local; T1-83 aplica DARK, que corrige el sesgo de cuantización del <span class="mono">argmax</span>.</p>
+    <p class="why">Con una métrica evaluada a umbrales de 0 a 10 px, ese sesgo pesa desproporcionadamente. Laina et al. (MICCAI 2017), en el dominio exacto — microcirugía retinal, 1818 secuencias in-vivo — mide heatmap por encima del 90 % a 20 px, y encuentra que la regresión directa de coordenadas es la peor opción de todas.</p>
+    <div class="meta"><span class="tag gpu">necesita pod</span><span class="tag free">sin reentrenar</span></div>
+  </div>
+</div>
+
+<!-- P2 -->
+<div class="tier t2">
+  <div class="tier-head">
+    <span class="tier-tag">P2</span><h2>Final Round</h2>
+    <span class="tier-when">16 días · la fase que reparte premios</span>
+  </div>
+
+  <div class="step">
+    <div class="step-top"><span class="step-id">P2.1</span><h3>Cabeza de distancia por bins (DFL)</h3></div>
+    <p>La pieza más portable del paper de los organizadores: softmax sobre <span class="mono">reg_max+1</span> logits, esperanza ponderada, reescalado lineal entre −1 mm y 6 mm. No depende de YOLO — se injerta sobre cualquier encoder de B-scan.</p>
+    <p class="why">No se hace ahora porque nuestro 0.0900 venía del bug de escala del 28 %, ya corregido, y no de debilidad del enfoque geométrico. Con dos días de fase no se cambia el motor. Lo que añade de verdad: cubrir los casos donde la segmentación <strong>no puede medir el gap</strong> y que hoy se descartan en vez de predecirse.</p>
+    <div class="meta"><span class="tag gpu">necesita pod</span></div>
+  </div>
+
+  <div class="step">
+    <div class="step-top"><span class="step-id">P2.2</span><h3>T1-R6 · robustez al 10 % sin OCT</h3></div>
+    <p>Depende del resultado de H1. <strong>Si el dropout explica parte de la brecha, esto sube a P0.</strong> La literatura ofrece una vía alternativa: EyeLS estima la profundidad solo desde la sombra del instrumento en la vista de microscopio, sin OCT — directamente aplicable a los casos con <span class="mono">oct_volume=None</span>.</p>
+    <div class="meta"><span class="tag gate">condicionado a H1</span></div>
+  </div>
+
+  <div class="step">
+    <div class="step-top"><span class="step-id">P2.3</span><h3>T1-R7 · cabezas auxiliares de segmentación</h3></div>
+    <p>Concatenar los logits de segmentación — vasos, ILM, instrumento — antes de la cabeza de heatmap. Es la receta de Laina et al. en este mismo dominio.</p>
+    <div class="meta"><span class="tag gpu">necesita pod</span></div>
+  </div>
+</div>
+
+<!-- cerrado -->
+<div class="closed">
+  <div class="tier-head"><h2>Cerrado · no volver a proponerlo</h2><span class="eyebrow">cada línea costó corridas o análisis</span></div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Descartado</th><th>Evidencia que lo cierra</th></tr></thead>
+      <tbody>
+        <tr><td>Otro backbone para el keypoint</td><td>3 arquitecturas nuestras + 3 del organizador. Mismo techo</td></tr>
+        <tr><td>Cross-attention para el keypoint</td><td>Ablation del organizador: p = 0.525. Sí sirve para la distancia: −73 % dMAE</td></tr>
+        <tr><td>Módulo recurrente (GRU / LSTM)</td><td>Ablation del organizador: empeora keypoint y distancia</td></tr>
+        <tr><td>Task 2 por apariencia</td><td>Oráculo negativo sobre 1214 casos; con el OCT barajado la métrica no cambia</td></tr>
+        <tr><td>Task 2 por vasos + template</td><td>Vasculatura plana (0.81–1.10) en las 8 orientaciones, con control positivo del instrumento a 3.0–3.6× en la misma corrida</td></tr>
+        <tr><td>MEMO / VDD-Reg</td><td>Asume un árbol capilar físico común: esa es justo la premisa falsada</td></tr>
+        <tr><td>STHN / UASTHN</td><td>Su ratio del 11 % es de área, no de lado. FIDO está en 2.4 %: 4.6× más extremo</td></tr>
+        <tr><td>GAN OCT → fundus</td><td>DD_RoTIR: la traducción sola es insuficiente en multimodal</td></tr>
+        <tr><td>LoFTR de fábrica</td><td>Delaunay et al.: 6 % de éxito en US–CT bajo umbral fino</td></tr>
+        <tr><td>DINOv2 congelado</td><td>0.8005 en Task 1, divergió en Task 2. LP→FT tampoco ataca el cuello</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="rules">
+  <h2>Reglas que no cambian</h2>
+  <ol>
+    <li><strong>GroupKFold por escenario, siempre.</strong> Los frames de un mismo escenario comparten anatomía casi exacta.</li>
+    <li><strong>Una hipótesis por peldaño.</strong> Si un cambio trae tres cosas y el score se mueve, no se aprendió nada.</li>
+    <li><strong>El Mock Test no selecciona modelos.</strong> Solo verifica que el contenedor corre.</li>
+    <li><strong>Reservar al menos 5 submissions</strong> para la Final Round.</li>
+    <li><strong>Los controles valen más que las métricas.</strong> Fue el OCT-shuffle el que detectó que un modelo entero estaba ignorando su segunda modalidad.</li>
+  </ol>
+</div>
+
+<div class="foot">
+  <span>Detalle en <span class="mono">PLAN.md</span></span>
+  <span>Hipótesis en <span class="mono">ATTACK_LADDER.md</span></span>
+  <span>Evidencia en <span class="mono">RESULTS.md</span></span>
+  <span>Para empezar: <span class="mono">ONBOARDING.md</span></span>
+</div>
+
+</div>

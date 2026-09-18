@@ -1,0 +1,143 @@
+train: 203 casos | mock: 5 casos
+[train] cobertura candidatos (de 203): {'forceps_midtip': 83, 'forceps_joint': 83, 'forceps_centroid': 83, 'endo_tip': 203}
+[mock] cobertura candidatos (de 5): {'endo_tip': 5}
+
+=== A. Distancia pareada vs nula (shuffle), set TRAIN ===
+  forceps_midtip: {
+  "n": 83,
+  "mean_true_dist_px": 74.49661989863122,
+  "median_true_dist_px": 81.1011990059305,
+  "std_true_dist_px": 24.749202458590283,
+  "q25_px": 62.16475846234983,
+  "q75_px": 91.29529519006758,
+  "shuffle_null_mean_of_means_px": 248.9344641099001,
+  "shuffle_null_std_of_means_px": 12.4427729501258,
+  "p_value_perm (P[null_mean <= true_mean])": 0.0,
+  "frac_within_50px": 0.14457831325301204,
+  "frac_within_100px": 0.8795180722891566,
+  "coverage_frac_cases_with_candidate": 0.4088669950738916
+}
+  forceps_joint: {
+  "n": 83,
+  "mean_true_dist_px": 130.33857954181732,
+  "median_true_dist_px": 132.76853620430134,
+  "std_true_dist_px": 49.09626985976597,
+  "q25_px": 97.56133664294141,
+  "q75_px": 170.71315814279802,
+  "shuffle_null_mean_of_means_px": 270.9202238596413,
+  "shuffle_null_std_of_means_px": 11.602898357673716,
+  "p_value_perm (P[null_mean <= true_mean])": 0.0,
+  "frac_within_50px": 0.04819277108433735,
+  "frac_within_100px": 0.27710843373493976,
+  "coverage_frac_cases_with_candidate": 0.4088669950738916
+}
+  forceps_centroid: {
+  "n": 83,
+  "mean_true_dist_px": 84.08296783356346,
+  "median_true_dist_px": 87.07016838183097,
+  "std_true_dist_px": 28.910252188883582,
+  "q25_px": 67.23146168093521,
+  "q75_px": 103.55643091469804,
+  "shuffle_null_mean_of_means_px": 251.42668730487972,
+  "shuffle_null_std_of_means_px": 12.064103927952253,
+  "p_value_perm (P[null_mean <= true_mean])": 0.0,
+  "frac_within_50px": 0.13253012048192772,
+  "frac_within_100px": 0.6746987951807228,
+  "coverage_frac_cases_with_candidate": 0.4088669950738916
+}
+  endo_tip: {
+  "n": 203,
+  "mean_true_dist_px": 533.6253704165156,
+  "median_true_dist_px": 524.8162883944724,
+  "std_true_dist_px": 121.29427699817623,
+  "q25_px": 450.73803443386623,
+  "q75_px": 614.104315366387,
+  "shuffle_null_mean_of_means_px": 557.6734788464878,
+  "shuffle_null_std_of_means_px": 2.3676981743461454,
+  "p_value_perm (P[null_mean <= true_mean])": 0.0,
+  "frac_within_50px": 0.0,
+  "frac_within_100px": 0.0,
+  "coverage_frac_cases_with_candidate": 1.0
+}
+
+  combinado (prioridad forceps_midtip > forceps_joint > forceps_centroid > endo_tip):
+  {
+  "n": 203,
+  "mean_true_dist_px": 363.8806625129487,
+  "median_true_dist_px": 419.6340199803887,
+  "std_true_dist_px": 261.47865855946696,
+  "q25_px": 85.61900970330865,
+  "q75_px": 596.2511853388505,
+  "shuffle_null_mean_of_means_px": 453.9651164157679,
+  "shuffle_null_std_of_means_px": 7.483241170570865,
+  "p_value_perm (P[null_mean <= true_mean])": 0.0,
+  "frac_within_50px": 0.059113300492610835,
+  "frac_within_100px": 0.35960591133004927,
+  "coverage_frac_cases_with_candidate": 1.0
+}
+
+=== A (mock). Distancia pareada vs nula, set MOCK ===
+  combinado: {
+  "n": 5,
+  "mean_true_dist_px": 588.8289937997941,
+  "median_true_dist_px": 629.3323246831594,
+  "std_true_dist_px": 104.92661127978575,
+  "q25_px": 576.6183748682523,
+  "q75_px": 656.3245715041894,
+  "shuffle_null_mean_of_means_px": 600.6846675826237,
+  "shuffle_null_std_of_means_px": 7.403137481490278,
+  "p_value_perm (P[null_mean <= true_mean])": 0.078,
+  "frac_within_50px": 0.0,
+  "frac_within_100px": 0.0,
+  "coverage_frac_cases_with_candidate": 1.0
+}
+
+Escala: media=158.62 std=14.97 (9.4% rel)
+Angulo: circ_std~=27.7 deg
+
+=== B. AUC de esquina por esquema, set TRAIN ===
+  techo_posicion_GT: {
+  "n": 203,
+  "n_missing_candidate": 0,
+  "mean_error_px": 57.92942955130645,
+  "median_error_px": 60.851707056871874,
+  "corner_auc": 0.030900134348410213
+}
+  instrumento_combo: {
+  "n": 203,
+  "n_missing_candidate": 0,
+  "mean_error_px": 377.0973617495073,
+  "median_error_px": 420.9370884372416,
+  "corner_auc": 0.0
+}
+  forceps_midtip_solo: {
+  "n": 83,
+  "n_missing_candidate": 120,
+  "mean_error_px": 95.59691113661475,
+  "median_error_px": 88.37883025478388,
+  "corner_auc": 0.0
+}
+  nulo_instrumento_shuffle: n=203 mean_error_px=454.97 corner_auc=0.0004
+
+=== B (mock). AUC de esquina, set MOCK (mismos mean_cos/sin/scale de TRAIN) ===
+  techo_posicion_GT: {
+  "n": 5,
+  "n_missing_candidate": 0,
+  "mean_error_px": 68.57685811945969,
+  "median_error_px": 64.23245732629019,
+  "corner_auc": 0.0
+}
+  instrumento_combo: {
+  "n": 5,
+  "n_missing_candidate": 0,
+  "mean_error_px": 545.0469888578862,
+  "median_error_px": 600.8858717855243,
+  "corner_auc": 0.0
+}
+  forceps_midtip_solo: {
+  "n": 0,
+  "n_missing_candidate": 5,
+  "mean_error_px": NaN,
+  "median_error_px": NaN,
+  "corner_auc": NaN
+}

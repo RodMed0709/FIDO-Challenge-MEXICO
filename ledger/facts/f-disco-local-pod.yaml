@@ -1,0 +1,12 @@
+id: f-disco-local-pod
+tipo: fact
+titulo: Disco local del contenedor
+ambito: entorno
+valor: 59 GB libres, escritura a 4.3 GB/s
+medido_el: '2026-08-17'
+medido_con: df + dd en el pod
+revisar_si: se recrea el pod o cambia la imagen del contenedor
+vida_util_dias: 7
+notas: Caben los B-scans de Task 1 (23 GB) y el en-face de Task 2 (1.2 GB). El fundus completo
+  de Task 1 son 43 GB y NO cabe junto con lo anterior.
+historial: []

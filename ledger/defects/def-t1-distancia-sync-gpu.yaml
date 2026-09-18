@@ -1,0 +1,15 @@
+id: def-t1-distancia-sync-gpu
+tipo: defect
+titulo: El bucle de distancia hace ~96 sincronizaciones GPU↔CPU por batch
+estado: abierto
+severidad: media
+donde: 'src/fido/train/train_task1_unet.py :: bucle de distancia'
+sintoma: '`.item()` y `torch.nonzero` dentro de un doble for: la validación es sync-bound.'
+evidencia: El algoritmo es correcto, verificado línea a línea contra `analysis/verify_task1_distance_geometry.py`.
+  El problema es de rendimiento.
+impacto: 'Validación mucho más lenta de lo necesario. Fix: un `argmax(...).cpu().numpy()`
+  por batch y la geometría en NumPy.'
+afecta:
+- run-2026-08-17-p10-t1-distancia
+abierto_el: '2026-08-17'
+historial: []

@@ -1,0 +1,19 @@
+{
+  "scored_at": "2026-08-19T06:09:47.597845+00:00",
+  "data_root": "<repo-root>\\data\\Mock Test",
+  "results": {
+    "registration": {
+      "final_score": 0.0,
+      "task2_score": 0.0,
+      "duration": 5.235000000000582,
+      "num_cases": 5,
+      "timed_out": 0,
+      "cuda_available": 0,
+      "wall_seconds": 13.48,
+      "avg_case_seconds": 0.525,
+      "max_case_seconds": 0.547,
+      "per_case_limit": 20,
+      "timed_out_cases": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+224 casos encontrados en ['data/Task 2']
+[10/224] acumulado 12s
+[20/224] acumulado 383s
+[30/224] acumulado 398s
+[40/224] acumulado 401s
+[50/224] acumulado 413s
+[60/224] acumulado 755s
+[70/224] acumulado 796s
+[80/224] acumulado 1083s
+[90/224] acumulado 1148s
+[100/224] acumulado 1171s
+[110/224] acumulado 1448s
+[120/224] acumulado 1518s
+[130/224] acumulado 1547s
+[140/224] acumulado 1852s
+[150/224] acumulado 1885s
+[160/224] acumulado 1911s
+[170/224] acumulado 2225s
+[180/224] acumulado 2270s
+[190/224] acumulado 2551s
+[200/224] acumulado 2601s
+[210/224] acumulado 2629s
+[220/224] acumulado 2692s
+[224/224] acumulado 2700s
+
+Escrito <repo-root>\experiments\102-t2-dense-search\results_train.json (224 casos, 2700s total)
+ok=224 error=0

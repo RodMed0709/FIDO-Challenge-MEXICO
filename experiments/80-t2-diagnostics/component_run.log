@@ -1,0 +1,19 @@
+
+Diagnóstico sobre 248 casos de validación (fold 0)
+
+  modelo tal cual (nada sustituido)      error medio   66.25 px   mediana   41.45   AUC 0.0048
+  con posición (tx,ty) perfecta          error medio   22.80 px   mediana   19.67   AUC 0.0480
+  con rotación (cos,sin) perfecta        error medio   57.95 px   mediana   35.25   AUC 0.0114
+  con escala perfecta                    error medio   62.68 px   mediana   37.12   AUC 0.0187
+  con rotación + escala perfectas        error medio   53.89 px   mediana   30.99   AUC 0.0337
+  con posición + escala perfectas        error medio   18.74 px   mediana   13.63   AUC 0.1459
+  con posición + rotación perfectas      error medio   10.78 px   mediana    9.17   AUC 0.2416
+  TODO perfecto (control)                error medio    3.48 px   mediana    2.77   AUC 0.6389
+
+Caída del error al sustituir cada componente:
+  posición               43.45 px ( 65.6%)
+  rotación                8.31 px ( 12.5%)
+  escala                  3.57 px (  5.4%)
+Error angular: mediana 5.7°
+Error de escala: mediana 7.0%
+Error de posición: mediana 32.9 px

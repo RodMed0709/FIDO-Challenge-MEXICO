@@ -1,0 +1,11 @@
+id: f-score-oficial-task1
+tipo: fact
+titulo: Fórmula del score oficial de Task 1
+ambito: metrica
+valor: final_score = 0.7·keypoint_auc + 0.3·distance_auc
+medido_el: '2026-08-17'
+medido_con: vendor/fido/Codabench Bundle/scoring_program/scoring_keypoints.py:12-13,269
+revisar_si: los organizadores publican un bundle de scoring nuevo
+vida_util_dias: 365
+notas: Verificado en el código congelado, no en la documentación.
+historial: []

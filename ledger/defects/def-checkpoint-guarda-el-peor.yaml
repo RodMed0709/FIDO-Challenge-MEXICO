@@ -1,0 +1,17 @@
+id: def-checkpoint-guarda-el-peor
+tipo: defect
+titulo: La selección de checkpoint guardaba el PEOR modelo cuando el AUC empataba
+estado: cerrado
+severidad: alta
+donde: 'train_task2_baseline.py y train_task1_unet.py :: selección de mejor época'
+sintoma: '`if auc > best_auc` con `best_auc = -1.0` y el AUC saturado en 0.0000: entra la
+  primera validación y ninguna posterior puede superarla.'
+evidencia: El `model_1.pth` guardado del peldaño 30 es el de la época 5 (203.29 px), no el
+  de la 25 (98.74 px).
+impacto: Se conservaba el peor de los modelos evaluados y se descartaba el mejor.
+afecta:
+- run-2026-08-17-p30-t2-baseline-roto
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: 'Peldaño 40: desempate por error medio cuando el AUC empata.'
+historial: []

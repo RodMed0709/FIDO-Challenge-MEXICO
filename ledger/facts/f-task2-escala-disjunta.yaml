@@ -1,0 +1,13 @@
+id: f-task2-escala-disjunta
+tipo: fact
+titulo: 'Escala del GT: train contra Mock Test'
+ambito: datos
+valor: train 159.6 ± 13.6 px (rango 125.9–196.9); Mock Test 215.3 ± 5.6 (rango 207.1–223.6)
+  — RANGOS DISJUNTOS
+medido_el: '2026-08-17'
+medido_con: analysis/verify_task2_structure.py + Mock Test
+revisar_si: se compara el `properties.json` del simulador en ambos conjuntos y aparece la
+  causa, o los organizadores aclaran la diferencia
+vida_util_dias: 14
+notas: Es el hecho que sostiene el defecto `def-escala-train-vs-mocktest`.
+historial: []

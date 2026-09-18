@@ -1,0 +1,11 @@
+id: f-moosefs-latencia
+tipo: fact
+titulo: Latencia de MooseFS (fs de red del pod)
+ambito: entorno
+valor: ~27 ms por lectura aleatoria de archivo; ~14 ms secuencial
+medido_el: '2026-08-17'
+medido_con: medición directa en el pod <POD_ID>
+revisar_si: se recrea el pod, cambia el datacenter, o se remonta el volumen
+vida_util_dias: 7
+notas: Explica por qué todo cache local es obligatorio y no opcional.
+historial: []

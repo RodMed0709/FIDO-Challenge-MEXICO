@@ -1,0 +1,11 @@
+id: f-task1-bytes-por-caso
+tipo: fact
+titulo: Peso de un caso de Task 1
+ambito: datos
+valor: fundus `microscope.png` 699 KB (1024×1024 RGB) · 2 B-scans de 176 KB (512×512 L) ·
+  2 máscaras de 2 KB
+medido_el: '2026-08-17'
+medido_con: inspección del dataset extraído
+revisar_si: cambia el formato de los datos
+vida_util_dias: 180
+historial: []

@@ -1,0 +1,128 @@
+[
+  {
+    "angle_deg": 0.0,
+    "perturb": "ioct_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 0.0,
+    "perturb": "eye_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 0.0,
+    "perturb": "both",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 0.1,
+    "perturb": "ioct_only",
+    "auc_mean": 0.16204882432230044,
+    "auc_std": 0.0022368244767476146
+  },
+  {
+    "angle_deg": 0.1,
+    "perturb": "eye_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 0.1,
+    "perturb": "both",
+    "auc_mean": 0.1616463231990415,
+    "auc_std": 0.0018866208837896462
+  },
+  {
+    "angle_deg": 0.25,
+    "perturb": "ioct_only",
+    "auc_mean": 0.1353527033098697,
+    "auc_std": 0.0011138591269015603
+  },
+  {
+    "angle_deg": 0.25,
+    "perturb": "eye_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 0.25,
+    "perturb": "both",
+    "auc_mean": 0.13434177025610305,
+    "auc_std": 0.00245037565852271
+  },
+  {
+    "angle_deg": 0.5,
+    "perturb": "ioct_only",
+    "auc_mean": 0.07260933053766662,
+    "auc_std": 0.004782166783682965
+  },
+  {
+    "angle_deg": 0.5,
+    "perturb": "eye_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 0.5,
+    "perturb": "both",
+    "auc_mean": 0.07163583944885427,
+    "auc_std": 0.002977269010007526
+  },
+  {
+    "angle_deg": 1.0,
+    "perturb": "ioct_only",
+    "auc_mean": 0.021248315111577057,
+    "auc_std": 0.000962447875844462
+  },
+  {
+    "angle_deg": 1.0,
+    "perturb": "eye_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 1.0,
+    "perturb": "both",
+    "auc_mean": 0.0197599970046428,
+    "auc_std": 0.0014917874531524948
+  },
+  {
+    "angle_deg": 2.0,
+    "perturb": "ioct_only",
+    "auc_mean": 0.0034165793020817735,
+    "auc_std": 0.0009262157598874098
+  },
+  {
+    "angle_deg": 2.0,
+    "perturb": "eye_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 2.0,
+    "perturb": "both",
+    "auc_mean": 0.0028549498277669616,
+    "auc_std": 0.0005533784354447152
+  },
+  {
+    "angle_deg": 5.0,
+    "perturb": "ioct_only",
+    "auc_mean": 4.6802456192901004e-05,
+    "auc_std": 5.211700953674949e-05
+  },
+  {
+    "angle_deg": 5.0,
+    "perturb": "eye_only",
+    "auc_mean": 0.1682641905047177,
+    "auc_std": 0.0
+  },
+  {
+    "angle_deg": 5.0,
+    "perturb": "both",
+    "auc_mean": 3.74419649543208e-05,
+    "auc_std": 7.488392990864162e-05
+  }
+]

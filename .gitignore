@@ -1,0 +1,76 @@
+# --- Secretos: NUNCA commitear ---
+.env
+.env.*
+!.env.example
+*.secrets
+*.secrets.env
+credentials.json
+service_account*.json
+*.pem
+rclone.conf
+
+# --- Datos ---
+/data/
+dataset/
+Dataset/
+*.zip
+*.tar
+*.tar.gz
+*.h5
+*.npy
+*.npz
+
+# --- Pesos / checkpoints ---
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+checkpoints/
+checkpoints_from_pod/
+runs/
+wandb/
+lightning_logs/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# --- Submissions generadas ---
+submissions/**/*.zip
+submissions/*/dist/
+
+# --- Logs de procesos largos ---
+logs/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Literatura: PDFs re-descargables desde los arXiv IDs de la tabla de citas ---
+literature/pdfs/
+literature/wip/*.log
+
+# --- codex-worker scratch ---
+.codex-worker/
+
+# --- Papers: los PDFs no se redistribuyen (copyright y peso). El indice si. ---
+papers/*.pdf
+papers/*.PDF
+!papers/INDEX.md
+
+# --- Cache de datos extraidos de zips para experimentos puntuales: regenerable
+# desde data/, no se commitea (pesa ~100MB por corrida). ---
+experiments/97-t2-crosshair-recheck/cache/
+
+# --- Rescate del network volume de RunPod (binarios + secretos) ---
+/pod_rescue/

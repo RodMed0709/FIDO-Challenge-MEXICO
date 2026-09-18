@@ -1,0 +1,14 @@
+casos encontrados: 5
+Scenario_12/00031: a_count(vasos)=0 c_count(instrumento, dentro de huella)=2
+  distancias observadas (fraccion del lado del cuadrado unitario): [0.15792127343778556, 0.2700595964154157]
+  (radios usados en el oraculo train: 0.005 / 0.01 / 0.02 / 0.04)
+Scenario_12/00066: a_count(vasos)=2 c_count(instrumento, dentro de huella)=2
+  distancias observadas (fraccion del lado del cuadrado unitario): [0.06647165447032068, 0.1214119534020543]
+  (radios usados en el oraculo train: 0.005 / 0.01 / 0.02 / 0.04)
+Scenario_12/00092: a_count(vasos)=0 c_count(instrumento, dentro de huella)=3
+  distancias observadas (fraccion del lado del cuadrado unitario): [0.7267352829259862, 0.9191336244882049, 0.9785485329739468]
+  (radios usados en el oraculo train: 0.005 / 0.01 / 0.02 / 0.04)
+Scenario_12/00099: a_count(vasos)=2 c_count(instrumento, dentro de huella)=1
+  distancias observadas (fraccion del lado del cuadrado unitario): [0.04569333480896743]
+  (radios usados en el oraculo train: 0.005 / 0.01 / 0.02 / 0.04)
+Scenario_12/00177: a_count(vasos)=0 c_count(instrumento, dentro de huella)=0

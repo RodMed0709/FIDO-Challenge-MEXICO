@@ -1,0 +1,21 @@
+id: def-t2-centro-vs-esquina
+tipo: defect
+titulo: El pico de correlación marca el CENTRO de la plantilla, pero se asignaba a (tx,ty),
+  que es la ESQUINA
+estado: cerrado
+severidad: critica
+donde: 'src/fido/models/task2_baseline.py :: decodificador'
+sintoma: AUC exactamente 0.0000 durante 25 épocas con el error bajando.
+evidencia: 'Offset centro↔esquina medido sobre 1214 casos: 113.1 ± 9.9 px (teórico `s·√2/2`
+  con s=159.6: 112.9 px). Con entrada perfecta del GT, el decodificador viejo daba AUC 0.0000
+  y el nuevo 0.7848.'
+impacto: 'Techo duro de AUC en 0.031: la corrida no podía puntuar aunque entrenara perfecto.'
+afecta:
+- run-2026-08-17-p30-t2-baseline-roto
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: 'Peldaño 40: `tx = cx - s·(cos+sin)/2`, `ty = cy - s·(sin-cos)/2`, y el heatmap
+  GT generado en el centro, no en la esquina.'
+notas: 'Ironía: el propio comentario del modelo decía «esto YA ES el centro» y dos líneas
+  después lo trataba como esquina.'
+historial: []

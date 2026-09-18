@@ -1,0 +1,11 @@
+id: f-task2-tamano
+tipo: fact
+titulo: Tamaño del dataset de Task 2
+ambito: datos
+valor: 1,214 casos en 10 escenarios
+medido_el: '2026-08-17'
+medido_con: conteo de los Numerical/*.json de los zips
+revisar_si: los organizadores publican datos nuevos
+vida_util_dias: 180
+notas: La documentación anuncia 150. Son 8x más.
+historial: []

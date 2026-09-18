@@ -1,0 +1,20 @@
+id: dec-task2-primero
+tipo: decision
+titulo: Task 2 antes que Task 1
+estado: revisar
+decision: Dedicar la GPU y el tiempo de diseño a Task 2 antes que a Task 1 (`CONSTITUTION.md`
+  §14).
+porque: 'El campo estaba más débil: líder en 0.475, segundo en 0.296, cuatro equipos en 0.000.
+  Task 1 estaba apretado (0.619 contra 0.618).'
+revisar_si: 'Task 1 empieza a rendir mucho más por hora invertida que Task 2 — que es exactamente
+  lo que pasó el 2026-08-17: keypoint 0.8534 contra registración 0.0048'
+evidencia:
+- f-leaderboard-competition
+- run-2026-08-17-p40-t2-decodificador
+- run-2026-08-17-p50-t1-keypoint
+decidido_el: '2026-08-14'
+vida_util_dias: 14
+notas: 'CANDIDATA A REVISIÓN. La condición pre-registrada se cumplió. Nota: la decisión está
+  escrita en `CONSTITUTION.md` §14, así que revertirla exige cambiar la constitución, no solo
+  este registro.'
+historial: []

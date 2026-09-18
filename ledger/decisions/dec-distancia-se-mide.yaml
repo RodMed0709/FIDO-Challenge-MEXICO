@@ -1,0 +1,15 @@
+id: dec-distancia-se-mide
+tipo: decision
+titulo: La distancia de Task 1 se MIDE por segmentación, no se regresa a ciegas
+estado: vigente
+decision: Segmentar cánula e ILM en el B-scan y aplicar la relación lineal verificada.
+porque: 'R² = 0.9916 sobre 92,012 mediciones reales: la relación es casi determinista.'
+revisar_si: el `distance_auc` corregido (sin descartar casos) cae por debajo de lo que daría
+  una regresión directa, o el 9.03% de casos fuera de rango resulta ser mayoría en el test
+  oculto
+evidencia:
+- f-task1-distancia-pixeles
+- run-2026-08-17-p10-t1-distancia
+decidido_el: '2026-08-15'
+vida_util_dias: 30
+historial: []

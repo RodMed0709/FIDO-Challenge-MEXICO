@@ -1,0 +1,15 @@
+id: cache-task2-enface
+tipo: asset
+titulo: Proyecciones en-face de Task 2 (1.2 GB)
+clase: cache
+ruta: /root/data_cache/Task2_enface
+host: pod:<POD_ID>
+task: 2
+componente: datos
+activo: false
+efimero: true
+existe: desconocido
+notas: 812.7 ms/caso → 20.7 ms/caso (39x). Verificado idéntico bit a bit al camino original
+  antes de confiar en él. Reconstruir con `infra/precompute_task2_enface.py --workers 12`
+  (~3 min).
+historial: []

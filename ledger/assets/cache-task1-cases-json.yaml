@@ -1,0 +1,13 @@
+id: cache-task1-cases-json
+tipo: asset
+titulo: Lista de casos de Task 1 (MooseFS)
+clase: cache
+ruta: /workspace/cache/task1_cases.json
+host: pod:<POD_ID>
+task: 1
+componente: datos
+activo: false
+efimero: true
+existe: desconocido
+notas: 'Evita reabrir los 61,691 JSON en cada lanzamiento: 15 min → 0.5 s. Flag `--case-cache`.'
+historial: []

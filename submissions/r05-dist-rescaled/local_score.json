@@ -1,0 +1,34 @@
+{
+  "scored_at": "2026-08-19T14:23:14.254301+00:00",
+  "data_root": "<repo-root>\\data\\Mock Test",
+  "results": {
+    "keypoints": {
+      "final_score": 0.638182,
+      "task1_score": 0.638182,
+      "keypoint_auc": 0.854545,
+      "distance_auc": 0.133333,
+      "duration": 4.234000000011292,
+      "num_cases": 5,
+      "timed_out": 0,
+      "cuda_available": 0,
+      "wall_seconds": 10.75,
+      "avg_case_seconds": 0.803,
+      "max_case_seconds": 1.125,
+      "per_case_limit": 20,
+      "timed_out_cases": []
+    },
+    "registration": {
+      "final_score": 0.0,
+      "task2_score": 0.0,
+      "duration": 5.3439999999973224,
+      "num_cases": 5,
+      "timed_out": 0,
+      "cuda_available": 0,
+      "wall_seconds": 11.61,
+      "avg_case_seconds": 0.528,
+      "max_case_seconds": 0.547,
+      "per_case_limit": 20,
+      "timed_out_cases": []
+    }
+  }
+}

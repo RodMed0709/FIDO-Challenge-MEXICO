@@ -1,0 +1,45 @@
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+  0%|          | 0.00/44.7M [00:00<?, ?B/s] 95%|█████████▍| 42.2M/44.7M [00:00<00:00, 443MB/s]100%|██████████| 44.7M/44.7M [00:00<00:00, 445MB/s]
+[epoch 1] train_loss=1.5985 (coord_l1=1.5867 heatmap_bce=0.1182)
+[epoch 1]   val_keypoint_auc=0.8524  val_mean_error=1.08px  n=14399
+  -> nuevo mejor (auc=0.8524 mean_error=1.08px) en epoch 1, guardado en checkpoints/task1_resnet18_fpn/keypoint_only.pth
+[epoch 2] train_loss=0.6267 (coord_l1=0.6251 heatmap_bce=0.0163)
+[epoch 2]   val_keypoint_auc=0.8534  val_mean_error=1.04px  n=14399
+  -> nuevo mejor (auc=0.8534 mean_error=1.04px) en epoch 2, guardado en checkpoints/task1_resnet18_fpn/keypoint_only.pth
+[epoch 3] train_loss=0.6053 (coord_l1=0.6044 heatmap_bce=0.0082)
+[epoch 3]   val_keypoint_auc=0.8527  val_mean_error=1.08px  n=14399
+[epoch 4] train_loss=0.5941 (coord_l1=0.5936 heatmap_bce=0.0052)
+[epoch 4]   val_keypoint_auc=0.8525  val_mean_error=1.08px  n=14399
+[epoch 5] train_loss=0.5854 (coord_l1=0.5850 heatmap_bce=0.0037)
+[epoch 5]   val_keypoint_auc=0.8527  val_mean_error=1.08px  n=14399
+[epoch 6] train_loss=0.5795 (coord_l1=0.5792 heatmap_bce=0.0030)
+[epoch 6]   val_keypoint_auc=0.8518  val_mean_error=1.13px  n=14399
+[epoch 7] train_loss=0.5736 (coord_l1=0.5733 heatmap_bce=0.0028)
+[epoch 7]   val_keypoint_auc=0.8524  val_mean_error=1.08px  n=14399
+[epoch 8] train_loss=0.5692 (coord_l1=0.5689 heatmap_bce=0.0026)
+[epoch 8]   val_keypoint_auc=0.8527  val_mean_error=1.08px  n=14399
+[epoch 9] train_loss=0.5650 (coord_l1=0.5648 heatmap_bce=0.0025)
+[epoch 9]   val_keypoint_auc=0.8528  val_mean_error=1.07px  n=14399
+[epoch 10] train_loss=0.5614 (coord_l1=0.5612 heatmap_bce=0.0023)
+[epoch 10]   val_keypoint_auc=0.8528  val_mean_error=1.08px  n=14399
+[epoch 11] train_loss=0.5584 (coord_l1=0.5582 heatmap_bce=0.0022)
+[epoch 11]   val_keypoint_auc=0.8523  val_mean_error=1.10px  n=14399
+[epoch 12] train_loss=0.5557 (coord_l1=0.5555 heatmap_bce=0.0021)
+[epoch 12]   val_keypoint_auc=0.8514  val_mean_error=1.13px  n=14399
+[epoch 13] train_loss=0.5526 (coord_l1=0.5524 heatmap_bce=0.0020)
+[epoch 13]   val_keypoint_auc=0.8519  val_mean_error=1.10px  n=14399
+[epoch 14] train_loss=0.5498 (coord_l1=0.5497 heatmap_bce=0.0019)
+[epoch 14]   val_keypoint_auc=0.8515  val_mean_error=1.11px  n=14399
+[epoch 15] train_loss=0.5477 (coord_l1=0.5475 heatmap_bce=0.0019)
+[epoch 15]   val_keypoint_auc=0.8508  val_mean_error=1.15px  n=14399
+[epoch 16] train_loss=0.5451 (coord_l1=0.5449 heatmap_bce=0.0019)
+[epoch 16]   val_keypoint_auc=0.8519  val_mean_error=1.10px  n=14399
+[epoch 17] train_loss=0.5433 (coord_l1=0.5431 heatmap_bce=0.0019)
+[epoch 17]   val_keypoint_auc=0.8522  val_mean_error=1.09px  n=14399
+[epoch 18] train_loss=0.5406 (coord_l1=0.5405 heatmap_bce=0.0019)
+[epoch 18]   val_keypoint_auc=0.8512  val_mean_error=1.13px  n=14399
+[epoch 19] train_loss=0.5387 (coord_l1=0.5386 heatmap_bce=0.0019)
+[epoch 19]   val_keypoint_auc=0.8513  val_mean_error=1.11px  n=14399
+[epoch 20] train_loss=0.5372 (coord_l1=0.5370 heatmap_bce=0.0018)
+[epoch 20]   val_keypoint_auc=0.8512  val_mean_error=1.11px  n=14399
+Mejor AUC: 0.8534 en época 2

@@ -1,0 +1,10 @@
+*.zip
+!Codabench Bundle/releases/*.zip
+**/__pycache__/
+**/.pytest_cache/
+*.pt
+*.pth
+.env
+Worker/data/*
+!Submission/Bundle/model.pth
+!Worker/data/.gitkeep

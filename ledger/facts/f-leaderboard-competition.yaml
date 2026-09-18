@@ -1,0 +1,11 @@
+id: f-leaderboard-competition
+tipo: fact
+titulo: Leaderboard de la fase Competition
+ambito: competencia
+valor: Task 1 líder 0.619 · Task 2 líder 0.475
+medido_el: '2026-08-14'
+medido_con: https://www.codabench.org/api/phases/27554/get_leaderboard/
+revisar_si: pasa más de un par de días, o antes de decidir a qué task dedicar GPU
+vida_util_dias: 3
+notas: Task 2 tenía cuatro equipos en 0.000, y ahí nació la decisión de atacarla primero.
+historial: []

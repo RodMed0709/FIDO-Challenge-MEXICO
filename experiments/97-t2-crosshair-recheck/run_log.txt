@@ -1,0 +1,348 @@
+C:\ProgramData\anaconda3\Lib\site-packages\scipy\stats\_wilcoxon.py:199: UserWarning: Sample size too small for normal approximation.
+  temp = _wilcoxon_iv(x, y, zero_method, correction, alternative, method, axis)
+[train] casos cargados: 203  fotometria=203  hough=203  region=203
+[train] guardado en <repo-root>\experiments\97-t2-crosshair-recheck\results_train.json
+[mock] casos cargados: 5  fotometria=5  hough=5  region=5
+[mock] guardado en <repo-root>\experiments\97-t2-crosshair-recheck\results_mock.json
+
+=== RESUMEN TRAIN ===
+{
+  "tag": "train",
+  "n_cases_loaded": 203,
+  "photometry": {
+    "R": {
+      "label": "delta_R (0-255)",
+      "n": 203,
+      "mean": 48.596376481962196,
+      "std": 24.492756690622436,
+      "cohens_d": 1.9841121640900607,
+      "p_wilcoxon": 2.4527649953336717e-34
+    },
+    "G": {
+      "label": "delta_G (0-255)",
+      "n": 203,
+      "mean": 35.987284808150505,
+      "std": 19.93579895578298,
+      "cohens_d": 1.8051588947084216,
+      "p_wilcoxon": 3.1472498973234097e-34
+    },
+    "B": {
+      "label": "delta_B (0-255)",
+      "n": 203,
+      "mean": 22.647439018038998,
+      "std": 12.974091165024163,
+      "cohens_d": 1.7455896316724255,
+      "p_wilcoxon": 7.031000313598826e-34
+    },
+    "contrast": {
+      "label": "delta_contrast",
+      "n": 203,
+      "mean": 1.257296367962093,
+      "std": 0.951609484910241,
+      "cohens_d": 1.3212314377895102,
+      "p_wilcoxon": 3.4146859788612255e-33
+    },
+    "edge": {
+      "label": "delta_edge",
+      "n": 203,
+      "mean": 5.006182172816932,
+      "std": 3.8501183269897594,
+      "cohens_d": 1.3002670950975808,
+      "p_wilcoxon": 5.455630798951017e-32
+    }
+  },
+  "photometry_matched": {
+    "R": {
+      "label": "matched_delta_R (0-255)",
+      "n": 203,
+      "mean": 12.556883294914515,
+      "std": 19.462077385374837,
+      "cohens_d": 0.6451974805295263,
+      "p_wilcoxon": 5.992564434425251e-15
+    },
+    "G": {
+      "label": "matched_delta_G (0-255)",
+      "n": 203,
+      "mean": 6.4741413974643915,
+      "std": 15.681227061947267,
+      "cohens_d": 0.4128593618272908,
+      "p_wilcoxon": 1.9471546259375573e-06
+    },
+    "B": {
+      "label": "matched_delta_B (0-255)",
+      "n": 203,
+      "mean": 2.87062182430257,
+      "std": 9.43135486637474,
+      "cohens_d": 0.30437003643422345,
+      "p_wilcoxon": 0.00029140556710682944
+    },
+    "contrast": {
+      "label": "matched_delta_contrast",
+      "n": 203,
+      "mean": 0.6282564523926126,
+      "std": 1.0156885299067084,
+      "cohens_d": 0.6185522765038198,
+      "p_wilcoxon": 1.2222552067237774e-15
+    },
+    "edge": {
+      "label": "matched_delta_edge",
+      "n": 203,
+      "mean": 2.0749100992718468,
+      "std": 3.8178964021429875,
+      "cohens_d": 0.5434694608547258,
+      "p_wilcoxon": 6.271605744199772e-12
+    }
+  },
+  "hough": {
+    "n": 203,
+    "gt_hit_rate": 0.059113300492610835,
+    "null_hit_rate_uniform": 0.021428571428571425,
+    "z_uniform": 3.4790537749481363,
+    "p_uniform": 0.0005031876032837255,
+    "null_hit_rate_matched": 0.042118226600985215,
+    "z_matched": 1.1658324323702967,
+    "p_matched": 0.24368220163589493,
+    "p_wilcoxon_case_level_uniform": 0.0012166042084614025,
+    "p_wilcoxon_case_level_matched": 2.474878527016617e-07,
+    "mean_n_detected_lines": 63.251231527093594
+  },
+  "region": {
+    "mean_gray": {
+      "label": "delta_mean_gray",
+      "n": 203,
+      "mean": 28.44105329185459,
+      "std": 17.187260080641664,
+      "cohens_d": 1.6547752904424997,
+      "p_wilcoxon": 4.1565657760293465e-34
+    },
+    "std_gray": {
+      "label": "delta_std_gray",
+      "n": 203,
+      "mean": 5.133004846755586,
+      "std": 7.631877389668976,
+      "cohens_d": 0.672574333243871,
+      "p_wilcoxon": 3.553929850765903e-15
+    },
+    "mean_sat": {
+      "label": "delta_mean_sat",
+      "n": 203,
+      "mean": -4.075493946103171,
+      "std": 15.776857947808878,
+      "cohens_d": -0.25832101420861076,
+      "p_wilcoxon": 0.00011270208884664802
+    },
+    "noise_std": {
+      "label": "delta_noise_std",
+      "n": 203,
+      "mean": 0.7796102501747171,
+      "std": 0.8718864221814286,
+      "cohens_d": 0.8941649168296028,
+      "p_wilcoxon": 5.48994267584067e-26
+    }
+  },
+  "region_matched": {
+    "mean_gray": {
+      "label": "matched_delta_mean_gray",
+      "n": 203,
+      "mean": 7.422116593188548,
+      "std": 12.85023657143214,
+      "cohens_d": 0.5775859885481753,
+      "p_wilcoxon": 7.031499277299829e-13
+    },
+    "std_gray": {
+      "label": "matched_delta_std_gray",
+      "n": 203,
+      "mean": 3.490568482267909,
+      "std": 6.507987367393824,
+      "cohens_d": 0.5363514532551613,
+      "p_wilcoxon": 2.7431065371090274e-11
+    },
+    "mean_sat": {
+      "label": "matched_delta_mean_sat",
+      "n": 203,
+      "mean": 8.327321591904054,
+      "std": 12.827419444573037,
+      "cohens_d": 0.6491813593440369,
+      "p_wilcoxon": 3.1965458807893786e-16
+    },
+    "noise_std": {
+      "label": "matched_delta_noise_std",
+      "n": 203,
+      "mean": 0.28014737580784865,
+      "std": 0.6355415718105742,
+      "cohens_d": 0.4408010242504604,
+      "p_wilcoxon": 4.2822721906163434e-07
+    }
+  }
+}
+
+=== RESUMEN MOCK ===
+{
+  "tag": "mock",
+  "n_cases_loaded": 5,
+  "photometry": {
+    "R": {
+      "label": "delta_R (0-255)",
+      "n": 5,
+      "mean": -5.801706881710646,
+      "std": 28.575317347745763,
+      "cohens_d": -0.2030321067341822,
+      "p_wilcoxon": 1.0
+    },
+    "G": {
+      "label": "delta_G (0-255)",
+      "n": 5,
+      "mean": -6.21228298641862,
+      "std": 20.098380024394796,
+      "cohens_d": -0.30909371695023885,
+      "p_wilcoxon": 0.8125
+    },
+    "B": {
+      "label": "delta_B (0-255)",
+      "n": 5,
+      "mean": -5.824689746581139,
+      "std": 9.100429823252519,
+      "cohens_d": -0.6400455648477689,
+      "p_wilcoxon": 0.3125
+    },
+    "contrast": {
+      "label": "delta_contrast",
+      "n": 5,
+      "mean": 11.50062519110779,
+      "std": 8.716656648734675,
+      "cohens_d": 1.3193849034741136,
+      "p_wilcoxon": 0.0625
+    },
+    "edge": {
+      "label": "delta_edge",
+      "n": 5,
+      "mean": -2.632821597027259,
+      "std": 3.2158851099972154,
+      "cohens_d": -0.8186926793008282,
+      "p_wilcoxon": 0.1875
+    }
+  },
+  "photometry_matched": {
+    "R": {
+      "label": "matched_delta_R (0-255)",
+      "n": 5,
+      "mean": 18.522661862476188,
+      "std": 26.871896830253817,
+      "cohens_d": 0.6892949157806525,
+      "p_wilcoxon": 0.3125
+    },
+    "G": {
+      "label": "matched_delta_G (0-255)",
+      "n": 5,
+      "mean": 17.141089430698674,
+      "std": 19.216198111722466,
+      "cohens_d": 0.8920125266736342,
+      "p_wilcoxon": 0.125
+    },
+    "B": {
+      "label": "matched_delta_B (0-255)",
+      "n": 5,
+      "mean": 8.779090733941498,
+      "std": 8.677467855422512,
+      "cohens_d": 1.0117111212870102,
+      "p_wilcoxon": 0.125
+    },
+    "contrast": {
+      "label": "matched_delta_contrast",
+      "n": 5,
+      "mean": 9.844036877846225,
+      "std": 7.156006156928875,
+      "cohens_d": 1.375632812768703,
+      "p_wilcoxon": 0.0625
+    },
+    "edge": {
+      "label": "matched_delta_edge",
+      "n": 5,
+      "mean": 1.390172701794763,
+      "std": 2.4281410309615077,
+      "cohens_d": 0.5725255181097431,
+      "p_wilcoxon": 0.4375
+    }
+  },
+  "hough": {
+    "n": 5,
+    "gt_hit_rate": 0.0,
+    "null_hit_rate_uniform": 0.01,
+    "z_uniform": -0.22467925856822923,
+    "p_uniform": 0.8222288013568868,
+    "null_hit_rate_matched": 0.01,
+    "z_matched": -0.22467925856822923,
+    "p_matched": 0.8222288013568868,
+    "p_wilcoxon_case_level_uniform": 0.31731050786291415,
+    "p_wilcoxon_case_level_matched": 0.31731050786291415,
+    "mean_n_detected_lines": 31.4
+  },
+  "region": {
+    "mean_gray": {
+      "label": "delta_mean_gray",
+      "n": 5,
+      "mean": -8.352802663764201,
+      "std": 15.950970990214298,
+      "cohens_d": -0.5236548087817683,
+      "p_wilcoxon": 0.625
+    },
+    "std_gray": {
+      "label": "delta_std_gray",
+      "n": 5,
+      "mean": -0.2676251147494799,
+      "std": 8.641322161889002,
+      "cohens_d": -0.030970389685248904,
+      "p_wilcoxon": 1.0
+    },
+    "mean_sat": {
+      "label": "delta_mean_sat",
+      "n": 5,
+      "mean": 6.442170532012222,
+      "std": 7.4635705608140555,
+      "cohens_d": 0.8631486068927271,
+      "p_wilcoxon": 0.125
+    },
+    "noise_std": {
+      "label": "delta_noise_std",
+      "n": 5,
+      "mean": 0.20122678461846633,
+      "std": 1.0428943889016693,
+      "cohens_d": 0.19295029943577466,
+      "p_wilcoxon": 0.8125
+    }
+  },
+  "region_matched": {
+    "mean_gray": {
+      "label": "matched_delta_mean_gray",
+      "n": 4,
+      "mean": 8.984380838169235,
+      "std": 17.493875711143478,
+      "cohens_d": 0.5135729204047247,
+      "p_wilcoxon": 0.625
+    },
+    "std_gray": {
+      "label": "matched_delta_std_gray",
+      "n": 4,
+      "mean": 4.831801924017961,
+      "std": 8.490135949790057,
+      "cohens_d": 0.5691077213124534,
+      "p_wilcoxon": 0.625
+    },
+    "mean_sat": {
+      "label": "matched_delta_mean_sat",
+      "n": 4,
+      "mean": -3.6358973104682946,
+      "std": 5.372991877319296,
+      "cohens_d": -0.6766988287877933,
+      "p_wilcoxon": 0.375
+    },
+    "noise_std": {
+      "label": "matched_delta_noise_std",
+      "n": 4,
+      "mean": 0.7082391609350042,
+      "std": 0.9294237947235513,
+      "cohens_d": 0.7620196136098103,
+      "p_wilcoxon": 0.25
+    }
+  }
+}

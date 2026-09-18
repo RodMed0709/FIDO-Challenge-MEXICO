@@ -1,0 +1,14 @@
+id: def-volumen-oct-sin-usar-vessel-seg
+tipo: defect
+titulo: '`train_fundus_vessel_seg` cargaba el volumen OCT completo sin usarlo'
+estado: cerrado
+severidad: media
+donde: src/fido/train/train_fundus_vessel_seg.py
+sintoma: 97% de los bytes leídos no llegaban al modelo, y con `num_workers=0`.
+evidencia: Auditoría de I/O del 2026-08-17.
+impacto: Single-thread sobre MooseFS leyendo 21.5 MB por caso para nada.
+afecta: []
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: Flags de carga explícitos + 8 workers.
+historial: []

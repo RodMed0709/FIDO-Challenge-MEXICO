@@ -1,0 +1,17 @@
+id: def-t2-sesgo-media-celda
+tipo: defect
+titulo: Sesgo de media celda por kernel de correlación con lados PARES
+estado: cerrado
+severidad: alta
+donde: 'src/fido/models/task2_baseline.py :: correlación cruzada'
+sintoma: La celda de salida `o` corresponde al centro `o-0.5` con `padding=(Ht//2, Wt//2)`.
+evidencia: 'Incrustando una plantilla conocida: sin corrección el pico sale a (+0.50, +0.50)
+  celdas; con `-0.5`, exactamente 0.00.'
+impacto: 0.5 celdas × 16 px = 8 px por eje → 11.3 px de error de esquina, por encima del umbral
+  de 10 px del AUC POR SÍ SOLO.
+afecta:
+- run-2026-08-17-p30-t2-baseline-roto
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: 'Peldaño 40: corrección de -0.5 celdas en la conversión pico→píxeles.'
+historial: []

@@ -1,0 +1,18 @@
+id: def-inference-no-existe
+tipo: defect
+titulo: '`inference.py` real no existe y el preproceso de la ingestión no coincide con el
+  del dataset'
+estado: abierto
+severidad: critica
+donde: submissions/ (no escrito) · vendor/fido ingestión
+sintoma: No hay ningún `inference.py` que cargue los modelos entrenados. Además, la ingestión
+  oficial entrega `uint8` HWC sin normalizar, mientras el dataset de entrenamiento divide
+  por 255 y hace `permute(2,0,1)`; y `oct_volume` llega `None` en ~10% de los casos de Task
+  1 (también cuando el directorio existe pero está vacío).
+evidencia: Lectura del código de ingestión oficial en `vendor/fido/`. `HANDOFF.md` §5.5.
+impacto: 'BLOQUEA LA ENTREGA. Sin esto no hay submission posible, y con el preproceso mal
+  el modelo vería entradas 255× fuera de rango: score 0 sin error visible.'
+afecta: []
+abierto_el: '2026-08-17'
+notas: En ataque activo al momento de sembrar el ledger.
+historial: []

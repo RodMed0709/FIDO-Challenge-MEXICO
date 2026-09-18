@@ -1,0 +1,17 @@
+id: def-t2-escala-sin-normalizar
+tipo: defect
+titulo: El término de escala sin normalizar se comía el 97% de la pérdida
+estado: cerrado
+severidad: alta
+donde: 'src/fido/train/train_task2_baseline.py :: pérdidas'
+sintoma: '`scale = softplus(raw)+1` arrancaba en 1.69 contra un objetivo de ~160.'
+evidencia: El término de escala valía ~45 sobre una pérdida total de ~46, y monopolizaba el
+  presupuesto de `clip_grad_norm_(1.0)`.
+impacto: El resto de la señal (posición, rotación) entrenaba con las migajas del clip.
+afecta:
+- run-2026-08-17-p30-t2-baseline-roto
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: 'Peldaño 40: `scale = 160·exp(raw)` con MSE en log; `coord_l1` normalizado por
+  el tamaño de imagen; BCE del heatmap con `pos_weight=50` y peso 1.0.'
+historial: []

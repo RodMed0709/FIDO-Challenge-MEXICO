@@ -1,0 +1,14 @@
+id: ck-t2-decodificador-ep60
+tipo: asset
+titulo: Task 2 — decodificador corregido, época 60 (AUC 0.0048)
+clase: checkpoint
+ruta: /workspace/FIDO_CHALLENGE/checkpoints/task2_fixed/model_1.pth
+host: pod:<POD_ID>
+task: 2
+componente: registracion
+activo: true
+efimero: true
+existe: desconocido
+producido_por: run-2026-08-17-p40-t2-decodificador
+notas: El mejor de Task 2 hasta ahora, y aun así lejos del líder (0.475).
+historial: []

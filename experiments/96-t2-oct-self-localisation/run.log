@@ -1,0 +1,26 @@
+1214 casos descubiertos en <repo-root>\data\_annotations\Task 2
+Extrayendo features de 1214 casos (root=<repo-root>\data\Task 2)...
+[100/1214] 103.4 casos/min
+[200/1214] 103.1 casos/min
+[300/1214] 102.7 casos/min
+[400/1214] 60.9 casos/min
+[500/1214] 66.8 casos/min
+[600/1214] 71.4 casos/min
+[700/1214] 74.6 casos/min
+[800/1214] 76.0 casos/min
+[900/1214] 77.3 casos/min
+[1000/1214] 78.3 casos/min
+[1100/1214] 79.9 casos/min
+[1200/1214] 81.6 casos/min
+Features cacheadas en experiments\96-t2-oct-self-localisation\features_cache.npz (1214/1214 casos)
+Dataset final: 1214 casos usables
+[control] pose constante (train-median, sin OCT): AUC=0.0000 mean_error=182.97px
+[compact/ridge] R2(tx,ty)=0.4052 R2(theta)=0.3862 R2(scale)=-0.3382 AUC(pos+mediana)=0.0000 AUC(todo predicho)=0.0001 [0.5s]
+[compact/random_forest] R2(tx,ty)=0.7291 R2(theta)=0.5019 R2(scale)=-0.4808 AUC(pos+mediana)=0.0001 AUC(todo predicho)=0.0019 [15.9s]
+[compact/mlp] R2(tx,ty)=0.3572 R2(theta)=0.3350 R2(scale)=-1.0529 AUC(pos+mediana)=0.0001 AUC(todo predicho)=0.0000 [80.9s]
+[full/ridge] R2(tx,ty)=-0.1367 R2(theta)=0.1567 R2(scale)=-0.4414 AUC(pos+mediana)=0.0004 AUC(todo predicho)=0.0000 [3.4s]
+[full/random_forest] R2(tx,ty)=0.7246 R2(theta)=0.5151 R2(scale)=-0.4755 AUC(pos+mediana)=0.0003 AUC(todo predicho)=0.0010 [56.2s]
+[full/mlp] R2(tx,ty)=0.1295 R2(theta)=-11.8046 R2(scale)=-5.6995 AUC(pos+mediana)=0.0002 AUC(todo predicho)=0.0000 [92.7s]
+[control shuffle] full/ridge con features barajadas: R2(tx,ty)=-0.0534 AUC=0.0000
+Resultados crudos en experiments\96-t2-oct-self-localisation\results.json
+Informe escrito en experiments\96-t2-oct-self-localisation\INFORME.md

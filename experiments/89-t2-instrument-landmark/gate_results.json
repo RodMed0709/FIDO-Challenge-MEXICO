@@ -1,0 +1,1427 @@
+{
+  "n_total_cases": 1214,
+  "n_candidates": 127,
+  "n_ok": 99,
+  "status_counts": {
+    "ok": 99,
+    "empty_instrument_mask": 28
+  },
+  "auc_subset_ok": 0.005509641873278238,
+  "mean_error_subset_px": 935.2816186315277,
+  "median_error_subset_px": 309.0140403179656,
+  "auc_extrapolated_1214": 0.0004493035794518496,
+  "per_scenario": {
+    "Scenario_01": {
+      "total": 152,
+      "candidates": 44,
+      "ok": 27,
+      "auc": 0.0,
+      "mean_error_px": 528.2367951846854
+    },
+    "Scenario_02": {
+      "total": 154,
+      "candidates": 0,
+      "ok": 0,
+      "auc": null,
+      "mean_error_px": null
+    },
+    "Scenario_03": {
+      "total": 83,
+      "candidates": 0,
+      "ok": 0,
+      "auc": null,
+      "mean_error_px": null
+    },
+    "Scenario_04": {
+      "total": 127,
+      "candidates": 33,
+      "ok": 26,
+      "auc": 0.0,
+      "mean_error_px": 1997.6301145464056
+    },
+    "Scenario_05": {
+      "total": 108,
+      "candidates": 0,
+      "ok": 0,
+      "auc": null,
+      "mean_error_px": null
+    },
+    "Scenario_06": {
+      "total": 121,
+      "candidates": 0,
+      "ok": 0,
+      "auc": null,
+      "mean_error_px": null
+    },
+    "Scenario_07": {
+      "total": 76,
+      "candidates": 10,
+      "ok": 9,
+      "auc": 0.060606060606060615,
+      "mean_error_px": 575.965897731722
+    },
+    "Scenario_08": {
+      "total": 145,
+      "candidates": 0,
+      "ok": 0,
+      "auc": null,
+      "mean_error_px": null
+    },
+    "Scenario_09": {
+      "total": 183,
+      "candidates": 40,
+      "ok": 37,
+      "auc": 0.0,
+      "mean_error_px": 573.2002896416946
+    },
+    "Scenario_10": {
+      "total": 65,
+      "candidates": 0,
+      "ok": 0,
+      "auc": null,
+      "mean_error_px": null
+    }
+  },
+  "results": [
+    {
+      "case_id": "Scenario_01/00001",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 1118.1911949008895,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00002",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 389.67051215595393,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00003",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 46.59066881945965,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00010",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 1887.0660551481792,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00011",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 276.7215657080759,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00025",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 139.87452965877273,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00030",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 179.52610100351382,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00035",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 192.66727551979938,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00038",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 270.2769122157803,
+      "labels": [
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00047",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00048",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00049",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 141.67552059696857,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00050",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 731.8266526185921,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00053",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 297.05441753394575,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00055",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 292.65580918040587,
+      "labels": [
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00061",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 2303.9227370349954,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00067",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00077",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00078",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00079",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00081",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00083",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00089",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00094",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 440.5368951264304,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00097",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 108.52294956671554,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00098",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 198.8894499769564,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00100",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 92.74757660113676,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00103",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00104",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00107",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 1235.4195263435288,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00112",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00117",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00118",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00119",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00122",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00124",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_01/00135",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 384.00488100306745,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00136",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 309.0140403179656,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00139",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 427.90764063243955,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00141",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 616.7839513844253,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00147",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 266.52404230003117,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00148",
+      "scenario": "Scenario_01",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 1064.6461322302207,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00149",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 303.69731138823954,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_01/00151",
+      "scenario": "Scenario_01",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 545.9791210200187,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00004",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 209.37551756188876,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00008",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 338.7472361370976,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00009",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 100.41183854586842,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00014",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 167.48684506543117,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00020",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 313.0063061150532,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00022",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 331.7068065083939,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00029",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 790.7530764756968,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00031",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 2367.8022414415836,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00033",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 34770.487414888295,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00035",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 501.9171773681543,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00037",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_04/00039",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_04/00042",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_04/00046",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_04/00050",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_04/00052",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 1127.9017413440079,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00064",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 408.14302556099574,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00065",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 375.99480102960246,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00073",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 217.0758898892065,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00074",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_04/00079",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 210.02171585187227,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00082",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 216.6763394383558,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00087",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 768.2696659072873,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00089",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 4969.215651693842,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00093",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 89.66047880323136,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00096",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 218.24433268975105,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00100",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 688.741526696049,
+      "labels": [
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00108",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 367.05139189840384,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00115",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_04/00117",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 543.4523777228576,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00118",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 903.2421859054981,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00120",
+      "scenario": "Scenario_04",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 721.9150873206199,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_04/00121",
+      "scenario": "Scenario_04",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 221.08230634749367,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00004",
+      "scenario": "Scenario_07",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_07/00013",
+      "scenario": "Scenario_07",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 189.17741836129053,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00014",
+      "scenario": "Scenario_07",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 915.6322056760117,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00020",
+      "scenario": "Scenario_07",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 517.8258225486286,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00024",
+      "scenario": "Scenario_07",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 2667.112883730223,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00028",
+      "scenario": "Scenario_07",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 444.59819008582485,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00036",
+      "scenario": "Scenario_07",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 4.429297222433643,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00050",
+      "scenario": "Scenario_07",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 250.99160661233378,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00053",
+      "scenario": "Scenario_07",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 79.78146251929186,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_07/00072",
+      "scenario": "Scenario_07",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 114.14419282945929,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00003",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 139.48374503237454,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00006",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 224.84173969649606,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00010",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 342.67528393973953,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00015",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_09/00020",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 421.9581118192432,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00032",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 229.4535466096779,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00041",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 172.57026334489885,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00042",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 6086.8758736532045,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00043",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 420.72393237419044,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00049",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 337.1853398267022,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00051",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 802.5390870274128,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00052",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 191.71176153801827,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00055",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 410.51108107943196,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00058",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 278.4874786104153,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00076",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 244.7805710585027,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00077",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 77.59148752544243,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00083",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 90.67352402801134,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00091",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 178.70578123136931,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00092",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 207.9201928262971,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00094",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 342.0440505483517,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00102",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 1198.5935295797174,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00107",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 190.77070089083037,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00117",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 166.22604524722982,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00121",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 199.0448227602468,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00124",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 301.94725776561484,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00126",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 185.45052698211146,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00128",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 431.7157311796136,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00129",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 115.6428694524362,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00131",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 2044.2102265441224,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00133",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 1853.7899023892821,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00138",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 796.3071614115013,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00139",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 643.2325137906668,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00152",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 662.3553574915128,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00154",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 106.60924547510373,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00155",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 191.5544376078485,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00166",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 225.2943540020017,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00174",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_09/00175",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "empty_instrument_mask",
+      "corner_error_px": null
+    },
+    {
+      "case_id": "Scenario_09/00176",
+      "scenario": "Scenario_09",
+      "n_points": 3,
+      "status": "ok",
+      "corner_error_px": 563.9919711215031,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip",
+        "Forceps:Joint Tip"
+      ]
+    },
+    {
+      "case_id": "Scenario_09/00182",
+      "scenario": "Scenario_09",
+      "n_points": 2,
+      "status": "ok",
+      "corner_error_px": 130.94121128157767,
+      "labels": [
+        "Forceps:Right Head Tip",
+        "Forceps:Left Head Tip"
+      ]
+    }
+  ]
+}

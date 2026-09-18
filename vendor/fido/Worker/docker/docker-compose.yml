@@ -1,0 +1,15 @@
+services:
+  worker:
+    image: codalab/codabench-compute-worker:v1.30
+    container_name: compute_worker_codabench
+    volumes:
+      - ${HOST_DIRECTORY}:/codabench
+      - ${DOCKER_SOCK}:/var/run/docker.sock
+      - ./compute_worker.py:/compute_worker.py:ro
+    env_file:
+      - .env
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 300m
+        max-file: "20"

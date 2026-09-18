@@ -1,0 +1,11 @@
+id: f-task2-bytes-por-caso
+tipo: fact
+titulo: Peso de un caso de Task 2
+ambito: datos
+valor: 128 PNG de volumen = 21.5 MB; su proyección en-face precomputada, 65 KB
+medido_el: '2026-08-17'
+medido_con: infra/precompute_task2_enface.py
+revisar_si: cambia el formato del volumen o la resolución
+vida_util_dias: 180
+notas: 330x menos. Por eso el cache de en-face convierte 26 GB en 1.2 GB.
+historial: []

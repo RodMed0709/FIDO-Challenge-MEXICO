@@ -1,0 +1,7 @@
+BROKER_URL=*
+BROKER_USE_SSL=True
+HOST_DIRECTORY=/home/soroush/fido-2026-main/Worker/data
+DOCKER_SOCK=/var/run/docker.sock
+CONTAINER_ENGINE_EXECUTABLE=docker
+USE_GPU=True
+GPU_DEVICE=nvidia.com/gpu=all

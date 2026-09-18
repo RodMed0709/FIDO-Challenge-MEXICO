@@ -1,0 +1,14 @@
+id: cache-task1-local
+tipo: asset
+titulo: Dataset de Task 1 en disco local (23 GB)
+clase: cache
+ruta: /root/data_cache/Task1
+host: pod:<POD_ID>
+task: 1
+componente: datos
+activo: false
+efimero: true
+existe: desconocido
+notas: 108 ms/caso desde MooseFS → 9.1 ms/caso. Reconstruir con `infra/cache_task1_local.sh`
+  (~7 min).
+historial: []

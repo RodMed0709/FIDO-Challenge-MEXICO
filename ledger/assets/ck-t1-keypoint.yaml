@@ -1,0 +1,15 @@
+id: ck-t1-keypoint
+tipo: asset
+titulo: Task 1 — keypoint (corrida en curso)
+clase: checkpoint
+ruta: /workspace/FIDO_CHALLENGE/checkpoints/task1_keypoint/keypoint_only.pth
+host: pod:<POD_ID>
+task: 1
+componente: keypoint
+activo: true
+efimero: true
+existe: desconocido
+producido_por: run-2026-08-17-p50-t1-keypoint
+notas: Se sobrescribe cada vez que mejora el AUC. Al sembrar el ledger correspondía a la época
+  4.
+historial: []

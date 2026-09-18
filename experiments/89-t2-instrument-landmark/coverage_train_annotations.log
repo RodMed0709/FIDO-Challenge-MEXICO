@@ -1,0 +1,24 @@
+casos totales (json con GT Task 2): 1214
+casos con anotacion de forceps (cualquiera): 538
+casos con anotacion de iluminador (cualquiera): 1214
+casos con >=1 keypoint de instrumento DENTRO de la huella uv: 279/1214 (0.2298)
+suma de puntos dentro de la huella (todos los casos): 469
+distribucion de puntos-dentro-de-huella por caso:
+  0 puntos: 935 casos
+  1 puntos: 152 casos
+  2 puntos: 64 casos
+  3 puntos: 63 casos
+casos con >=2 puntos (Procrustes/Umeyama cerrado, 4 DOF): 127/1214 (0.1046)
+casos con ==1 punto (solo traslacion, requiere prior externo de rotacion/escala): 152/1214 (0.1252)
+
+desglose por escenario (inside/total):
+  Scenario_01: 84/152 = 0.553
+  Scenario_02: 3/154 = 0.019
+  Scenario_03: 0/83 = 0.000
+  Scenario_04: 61/127 = 0.480
+  Scenario_05: 0/108 = 0.000
+  Scenario_06: 0/121 = 0.000
+  Scenario_07: 37/76 = 0.487
+  Scenario_08: 0/145 = 0.000
+  Scenario_09: 94/183 = 0.514
+  Scenario_10: 0/65 = 0.000

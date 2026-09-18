@@ -1,0 +1,122 @@
+casos totales: 1214
+candidatos (>=2 puntos dentro de la huella): 127
+[1/127] Scenario_01/00001 n=3 err=1118.19px
+[2/127] Scenario_01/00002 n=3 err=389.67px
+[3/127] Scenario_01/00003 n=2 err=46.59px
+[4/127] Scenario_01/00010 n=3 err=1887.07px
+[5/127] Scenario_01/00011 n=3 err=276.72px
+[6/127] Scenario_01/00025 n=3 err=139.87px
+[7/127] Scenario_01/00030 n=3 err=179.53px
+[8/127] Scenario_01/00035 n=3 err=192.67px
+[9/127] Scenario_01/00038 n=2 err=270.28px
+[12/127] Scenario_01/00049 n=3 err=141.68px
+[13/127] Scenario_01/00050 n=3 err=731.83px
+[14/127] Scenario_01/00053 n=3 err=297.05px
+[15/127] Scenario_01/00055 n=2 err=292.66px
+[16/127] Scenario_01/00061 n=3 err=2303.92px
+[24/127] Scenario_01/00094 n=2 err=440.54px
+[25/127] Scenario_01/00097 n=2 err=108.52px
+[26/127] Scenario_01/00098 n=2 err=198.89px
+[27/127] Scenario_01/00100 n=2 err=92.75px
+[30/127] Scenario_01/00107 n=3 err=1235.42px
+[37/127] Scenario_01/00135 n=3 err=384.00px
+[38/127] Scenario_01/00136 n=3 err=309.01px
+[39/127] Scenario_01/00139 n=2 err=427.91px
+[40/127] Scenario_01/00141 n=3 err=616.78px
+[41/127] Scenario_01/00147 n=3 err=266.52px
+[42/127] Scenario_01/00148 n=2 err=1064.65px
+[43/127] Scenario_01/00149 n=3 err=303.70px
+[44/127] Scenario_01/00151 n=3 err=545.98px
+[45/127] Scenario_04/00004 n=2 err=209.38px
+[46/127] Scenario_04/00008 n=2 err=338.75px
+[47/127] Scenario_04/00009 n=2 err=100.41px
+[48/127] Scenario_04/00014 n=2 err=167.49px
+[49/127] Scenario_04/00020 n=2 err=313.01px
+[50/127] Scenario_04/00022 n=3 err=331.71px
+[51/127] Scenario_04/00029 n=3 err=790.75px
+[52/127] Scenario_04/00031 n=3 err=2367.80px
+[53/127] Scenario_04/00033 n=3 err=34770.49px
+[54/127] Scenario_04/00035 n=2 err=501.92px
+[60/127] Scenario_04/00052 n=2 err=1127.90px
+[61/127] Scenario_04/00064 n=3 err=408.14px
+[62/127] Scenario_04/00065 n=2 err=375.99px
+[63/127] Scenario_04/00073 n=2 err=217.08px
+[65/127] Scenario_04/00079 n=3 err=210.02px
+[66/127] Scenario_04/00082 n=3 err=216.68px
+[67/127] Scenario_04/00087 n=3 err=768.27px
+[68/127] Scenario_04/00089 n=3 err=4969.22px
+[69/127] Scenario_04/00093 n=2 err=89.66px
+[70/127] Scenario_04/00096 n=2 err=218.24px
+[71/127] Scenario_04/00100 n=2 err=688.74px
+[72/127] Scenario_04/00108 n=3 err=367.05px
+[74/127] Scenario_04/00117 n=3 err=543.45px
+[75/127] Scenario_04/00118 n=2 err=903.24px
+[76/127] Scenario_04/00120 n=3 err=721.92px
+[77/127] Scenario_04/00121 n=2 err=221.08px
+[79/127] Scenario_07/00013 n=2 err=189.18px
+[80/127] Scenario_07/00014 n=2 err=915.63px
+[81/127] Scenario_07/00020 n=3 err=517.83px
+[82/127] Scenario_07/00024 n=3 err=2667.11px
+[83/127] Scenario_07/00028 n=3 err=444.60px
+[84/127] Scenario_07/00036 n=2 err=4.43px
+[85/127] Scenario_07/00050 n=2 err=250.99px
+[86/127] Scenario_07/00053 n=2 err=79.78px
+[87/127] Scenario_07/00072 n=2 err=114.14px
+[88/127] Scenario_09/00003 n=3 err=139.48px
+[89/127] Scenario_09/00006 n=2 err=224.84px
+[90/127] Scenario_09/00010 n=3 err=342.68px
+[92/127] Scenario_09/00020 n=3 err=421.96px
+[93/127] Scenario_09/00032 n=2 err=229.45px
+[94/127] Scenario_09/00041 n=2 err=172.57px
+[95/127] Scenario_09/00042 n=3 err=6086.88px
+[96/127] Scenario_09/00043 n=3 err=420.72px
+[97/127] Scenario_09/00049 n=3 err=337.19px
+[98/127] Scenario_09/00051 n=2 err=802.54px
+[99/127] Scenario_09/00052 n=2 err=191.71px
+[100/127] Scenario_09/00055 n=2 err=410.51px
+[101/127] Scenario_09/00058 n=3 err=278.49px
+[102/127] Scenario_09/00076 n=3 err=244.78px
+[103/127] Scenario_09/00077 n=2 err=77.59px
+[104/127] Scenario_09/00083 n=2 err=90.67px
+[105/127] Scenario_09/00091 n=3 err=178.71px
+[106/127] Scenario_09/00092 n=3 err=207.92px
+[107/127] Scenario_09/00094 n=3 err=342.04px
+[108/127] Scenario_09/00102 n=3 err=1198.59px
+[109/127] Scenario_09/00107 n=3 err=190.77px
+[110/127] Scenario_09/00117 n=2 err=166.23px
+[111/127] Scenario_09/00121 n=3 err=199.04px
+[112/127] Scenario_09/00124 n=3 err=301.95px
+[113/127] Scenario_09/00126 n=3 err=185.45px
+[114/127] Scenario_09/00128 n=3 err=431.72px
+[115/127] Scenario_09/00129 n=2 err=115.64px
+[116/127] Scenario_09/00131 n=3 err=2044.21px
+[117/127] Scenario_09/00133 n=3 err=1853.79px
+[118/127] Scenario_09/00138 n=3 err=796.31px
+[119/127] Scenario_09/00139 n=2 err=643.23px
+[120/127] Scenario_09/00152 n=2 err=662.36px
+[121/127] Scenario_09/00154 n=2 err=106.61px
+[122/127] Scenario_09/00155 n=3 err=191.55px
+[123/127] Scenario_09/00166 n=2 err=225.29px
+[126/127] Scenario_09/00176 n=3 err=563.99px
+[127/127] Scenario_09/00182 n=2 err=130.94px
+
+candidatos OK (score calculado): 99/127
+desglose de status: {'ok': 99, 'empty_instrument_mask': 28}
+
+AUC sobre el subconjunto OK (n=99): 0.0055
+error medio px (subconjunto OK): 935.28
+error mediano px (subconjunto OK): 309.01
+
+AUC extrapolado a los 1214 casos (0 en los que no llegan a n_ok): 0.0004
+
+desglose por escenario (candidatos / OK / AUC-escenario):
+  Scenario_01: total=152 candidatos=44 ok=27 AUC=0.0000 error_medio=528.24px
+  Scenario_02: total=154 candidatos=0 ok=0 AUC=nan error_medio=nanpx
+  Scenario_03: total=83 candidatos=0 ok=0 AUC=nan error_medio=nanpx
+  Scenario_04: total=127 candidatos=33 ok=26 AUC=0.0000 error_medio=1997.63px
+  Scenario_05: total=108 candidatos=0 ok=0 AUC=nan error_medio=nanpx
+  Scenario_06: total=121 candidatos=0 ok=0 AUC=nan error_medio=nanpx
+  Scenario_07: total=76 candidatos=10 ok=9 AUC=0.0606 error_medio=575.97px
+  Scenario_08: total=145 candidatos=0 ok=0 AUC=nan error_medio=nanpx
+  Scenario_09: total=183 candidatos=40 ok=37 AUC=0.0000 error_medio=573.20px
+  Scenario_10: total=65 candidatos=0 ok=0 AUC=nan error_medio=nanpx

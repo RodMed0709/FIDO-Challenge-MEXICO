@@ -1,0 +1,11 @@
+id: f-task2-offset-centro-esquina
+tipo: fact
+titulo: Offset centro↔esquina en Task 2
+ambito: metrica
+valor: 113.1 ± 9.9 px (teórico `s·√2/2` = 112.9 con s=159.6)
+medido_el: '2026-08-17'
+medido_con: medición sobre los 1214 casos de entrenamiento
+revisar_si: cambia la parametrización de la matriz objetivo
+vida_util_dias: 365
+notas: Explica por sí solo el error de 98.74 px del peldaño 30.
+historial: []

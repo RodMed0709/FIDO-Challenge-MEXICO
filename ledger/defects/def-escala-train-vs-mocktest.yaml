@@ -1,0 +1,16 @@
+id: def-escala-train-vs-mocktest
+tipo: defect
+titulo: La escala del GT en train y en el Mock Test son rangos disjuntos
+estado: abierto
+severidad: alta
+donde: datos (Task 2)
+sintoma: 'Train: 159.6 ± 13.6 px, rango 125.9–196.9. Mock Test: 215.3 ± 5.6, rango 207.1–223.6.
+  No se solapan.'
+evidencia: Medido sobre los 1214 casos de train y los casos del Mock Test. Ver `f-task2-escala-disjunta`.
+impacto: 'Si el test oculto se parece al Mock Test, cualquier prior de escala calibrado en
+  train está sesgado. Investigación pendiente: comparar el `properties.json` del simulador
+  en ambos.'
+afecta:
+- run-2026-08-17-p40-t2-decodificador
+abierto_el: '2026-08-17'
+historial: []

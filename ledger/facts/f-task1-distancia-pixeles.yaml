@@ -1,0 +1,11 @@
+id: f-task1-distancia-pixeles
+tipo: fact
+titulo: Relación distancia↔píxeles en Task 1
+ambito: metrica
+valor: distancia = 0.7320·pixel_gap + 2.6779 (R² = 0.9916)
+medido_el: '2026-08-15'
+medido_con: analysis/verify_task1_distance_geometry.py — 92,012 mediciones sobre 61,691 frames
+revisar_si: cambia la resolución del B-scan o los parámetros del simulador
+vida_util_dias: 365
+notas: Es lo que justifica MEDIR la distancia en vez de regresarla a ciegas.
+historial: []

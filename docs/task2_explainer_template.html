@@ -1,0 +1,473 @@
+<title>El cuadrado del iOCT</title>
+
+<style>
+  /* ---- Paleta clara: neutros con sesgo hacia el acento teal ---------- */
+  :root {
+    --paper:    #F1F3F3;
+    --surface:  #FFFFFF;
+    --sunken:   #E5E9E9;
+    --ink:      #15211F;
+    --muted:    #5B6A69;
+    --hairline: #CFD8D7;
+    --accent:   #0E7C86;   /* el teal del overlay iOCT */
+    --accent-soft: #DCEDEE;
+    --tissue:   #A85E1B;   /* el ámbar de la retina */
+    --alert:    #B93C29;
+    --shadow:   0 1px 2px rgba(21, 33, 31, .06), 0 8px 24px rgba(21, 33, 31, .06);
+  }
+  /* Preferencia del sistema: solo se aplica si NO hay elección explícita de claro */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:    #0D1313;
+      --surface:  #151D1D;
+      --sunken:   #1D2726;
+      --ink:      #E4ECEB;
+      --muted:    #93A3A2;
+      --hairline: #2C3937;
+      --accent:   #4FBFC8;
+      --accent-soft: #16302F;
+      --tissue:   #DE9A52;
+      --alert:    #E0705C;
+      --shadow:   0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
+    }
+  }
+  /* Elección explícita de oscuro: gana siempre */
+  :root[data-theme="dark"] {
+    --paper:    #0D1313;
+    --surface:  #151D1D;
+    --sunken:   #1D2726;
+    --ink:      #E4ECEB;
+    --muted:    #93A3A2;
+    --hairline: #2C3937;
+    --accent:   #4FBFC8;
+    --accent-soft: #16302F;
+    --tissue:   #DE9A52;
+    --alert:    #E0705C;
+    --shadow:   0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
+  }
+
+  /* Tipografía: tres roles distintos, todos de sistema.
+     La CSP de los artifacts bloquea CDNs de fuentes, así que un @import
+     fallaría en silencio a una fuente cualquiera. */
+  :root {
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Cambria, Georgia, serif;
+    --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  /* ---- Encabezado ---------------------------------------------------- */
+  header { display: flex; flex-direction: column; gap: .9rem; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .standfirst {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 34em;
+    margin: 0;
+  }
+
+  /* ---- Secciones ------------------------------------------------------ */
+  section { display: flex; flex-direction: column; gap: 1.1rem; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: .8rem;
+    border-top: 1px solid var(--hairline);
+    padding-top: 1.1rem;
+  }
+  .sec-num {
+    font-family: var(--mono);
+    font-size: .8rem;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-weight: 650;
+    font-size: 1rem;
+    margin: .6rem 0 -.3rem;
+    letter-spacing: .002em;
+  }
+
+  p { margin: 0; max-width: 68ch; }
+  p + p { margin-top: -.2rem; }
+
+  strong { font-weight: 650; }
+  em { font-style: italic; color: var(--muted); }
+
+  code {
+    font-family: var(--mono);
+    font-size: .88em;
+    background: var(--sunken);
+    padding: .1em .35em;
+    border-radius: 3px;
+  }
+
+  ul { margin: 0; padding-left: 1.15rem; max-width: 68ch; display: flex; flex-direction: column; gap: .4rem; }
+
+  /* ---- Figuras --------------------------------------------------------- */
+  figure {
+    margin: .6rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+  }
+  figcaption {
+    font-size: .88rem;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 62ch;
+  }
+  figcaption b { color: var(--ink); font-weight: 600; }
+
+  .shot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background: var(--sunken);
+  }
+
+  .pair {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .pair figcaption { font-size: .82rem; }
+  .pair figure { gap: .5rem; }
+
+  .scroller { overflow-x: auto; }
+  .diagram {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 620px;      /* por debajo de esto el texto del SVG deja de leerse */
+    color: var(--ink);
+  }
+
+  /* Estilos de los diagramas. Viven aquí y no dentro del SVG para que hereden
+     los tokens de tema y cambien solos entre claro y oscuro. */
+  .dg-line   { stroke: currentColor; stroke-width: 1.4; opacity: .35; }
+  .dg-div    { stroke: currentColor; stroke-width: 1; opacity: .18; }
+  .dg-frame  { stroke: currentColor; stroke-width: 1.4; fill: none; opacity: .32; }
+  .dg-sq     { stroke: var(--accent); stroke-width: 2.4; fill: var(--accent); fill-opacity: .12; }
+  .dg-pred   { stroke: var(--alert); stroke-width: 2.2; fill: none; stroke-dasharray: 6 4; }
+  .dg-ghost  { stroke: currentColor; stroke-width: 1.4; fill: none; opacity: .28; stroke-dasharray: 4 4; }
+  .dg-arrow  { stroke: currentColor; stroke-width: 1.8; fill: none; opacity: .65; }
+  .dg-err    { stroke: var(--alert); stroke-width: 2.2; }
+  .dg-mark      { stroke: var(--accent); stroke-width: 3; fill: none; }
+  .dg-mark-flip { stroke: var(--accent); stroke-width: 3; fill: none; opacity: .45; }
+  .dg-acc       { fill: var(--accent); }
+  .dg-acc-fill  { fill: var(--accent); }
+  .dg-err-fill  { fill: var(--alert); }
+  .dg-off       { fill: currentColor; opacity: .22; }
+  .dg-txt {
+    fill: currentColor;
+    font-family: var(--sans);
+    font-size: 12.5px;
+  }
+  .dg-lbl {
+    fill: var(--muted);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .07em;
+  }
+
+  /* ---- Bloque de datos -------------------------------------------------- */
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 1.2rem 1.35rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+  .panel-label {
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th, td { text-align: left; padding: .5rem .7rem; border-bottom: 1px solid var(--hairline); }
+  th {
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .matrix {
+    font-family: var(--mono);
+    font-size: .92rem;
+    line-height: 1.5;
+    background: var(--sunken);
+    border-radius: 5px;
+    padding: .9rem 1.1rem;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: .9rem 1.1rem;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .callout p { max-width: 62ch; }
+
+  .teal { color: var(--accent); }
+  .amber { color: var(--tissue); }
+  .red { color: var(--alert); }
+
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding-top: 1.2rem;
+    font-size: .85rem;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .shot { transition: none; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">FIDO Challenge &middot; Tarea 2</div>
+    <h1>El cuadrado del iOCT</h1>
+    <p class="standfirst">La tarea se anuncia como &laquo;registración 3D&nbsp;a&nbsp;2D&raquo;, que suena a problema de geometría volumétrica. Mirando el ground truth real, lo que pide es más concreto: decir en qué pedazo de la retina cayó el escaneo.</p>
+  </header>
+
+  <!-- 1 ----------------------------------------------------------------- -->
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Dos vistas que se necesitan</h2></div>
+
+    <p>El cirujano opera dentro del ojo con instrumentos de menos de un milímetro, y tiene dos fuentes de imagen que ven cosas distintas.</p>
+
+    <p>El <strong>microscopio</strong> da la vista de frente: la retina, los vasos, el nervio óptico, los instrumentos. Es una foto aérea &mdash; te dice dónde está cada cosa en el mapa, pero <em>no a qué altura</em>.</p>
+
+    <p>El <strong>iOCT</strong> dispara luz infrarroja y reconstruye cortes transversales de la retina, con resolución de micras. Eso sí da profundidad &mdash; pero solo de un pedacito, y solo por donde escaneó.</p>
+
+    <div class="callout">
+      <p>El microscopio es la foto aérea. El iOCT es un corte vertical de una sola cuadra. <strong>Cada uno sabe lo que el otro no.</strong></p>
+    </div>
+  </section>
+
+  <!-- 2 ----------------------------------------------------------------- -->
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Qué pide la tarea, en una imagen</h2></div>
+
+    <p>El iOCT no escanea toda la retina: escanea <strong>un cuadrito</strong>. Tarea 2 es reconstruir dónde cayó ese cuadrito.</p>
+
+    <div class="pair">
+      <figure>
+        <img class="shot" src="{{FIG_FUNDUS}}" alt="Imagen de microscopio quirúrgico del fondo del ojo: retina anaranjada, vasos sanguíneos, nervio óptico a la izquierda y un fórceps entrando desde abajo a la derecha.">
+        <figcaption>Lo que ve el cirujano. Caso real del dataset: <code>Scenario_01 / 00102</code>.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot" src="{{FIG_CROSSHAIR}}" alt="La misma imagen con un cuadrado rotado dibujado encima, una crucecita blanca en su centro y círculos en sus cuatro esquinas.">
+        <figcaption>Lo mismo, con el cuadrado del escaneo dibujado desde el ground truth. <b>Eso es lo que hay que predecir.</b></figcaption>
+      </figure>
+    </div>
+
+    <p>El cuadrado no está dibujado en la imagen original. No hay pista visual gratis: hay que deducirlo del contenido del volumen OCT.</p>
+  </section>
+
+  <!-- 3 ----------------------------------------------------------------- -->
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>La matriz es solo cuatro perillas</h2></div>
+
+    <p>Lo que se entrega es una matriz de 3&times;3. Suena abstracto, pero es un traductor entre dos sistemas de coordenadas: del espacio del volumen OCT, al espacio de píxeles del microscopio.</p>
+
+    <figure>
+      <div class="scroller">
+        {{SVG_MAPPING}}
+      </div>
+      <figcaption>El volumen iOCT vive en un cuadrado normalizado de &minus;1 a 1 con el origen al centro. La matriz <code>M</code> lo lleva a píxeles de la imagen de 1024&times;1024. <b>Traduce esquinas a esquinas.</b></figcaption>
+    </figure>
+
+    <p>Y aunque la matriz tiene seis números libres en teoría, los datos dicen otra cosa. Sobre los <strong>1214 casos de entrenamiento</strong> medidos, siempre resulta ser una <strong>similitud reflejada</strong>: solo cambian cuatro cosas.</p>
+
+    <figure>
+      <div class="scroller">
+        {{SVG_KNOBS}}
+      </div>
+      <figcaption>Las cuatro perillas. El espejo no es una perilla &mdash; el determinante salió negativo en el <b>100&nbsp;%</b> de los 1214 casos, así que está siempre puesto.</figcaption>
+    </figure>
+
+    <div class="panel">
+      <div class="panel-label">El caso de arriba, en números</div>
+      <div class="matrix">M = [[-153.07,   70.13,  501.78],
+     [  70.13,  153.06,  513.87],
+     [   0.00,    0.00,    1.00]]
+
+centro (tx, ty) = (501.8, 513.9)   ← casi el centro de la imagen
+tamaño  s       = 168.4
+ángulo  θ       = 155.4°</div>
+    </div>
+  </section>
+
+  <!-- 4 ----------------------------------------------------------------- -->
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Cómo se mide el error, y qué pesa más</h2></div>
+
+    <p>Aquí hay una sutileza que vale oro. El scoring <em>no</em> mide el cuadrado físico del escaneo. Toma un cuadrado unitario canónico &mdash; las esquinas <code>(0,0)</code>, <code>(1,0)</code>, <code>(1,1)</code>, <code>(0,1)</code> &mdash; lo empuja por tu matriz y por la verdadera, y promedia la distancia entre las cuatro parejas de esquinas.</p>
+
+    <p>Es una forma de comparar matrices. Pero como esas esquinas específicas no están centradas en el origen, <strong>cada parámetro pesa distinto</strong>.</p>
+
+    <figure>
+      <div class="scroller">
+        {{SVG_ERROR}}
+      </div>
+      <figcaption>La traslación aparece en las cuatro esquinas; cada columna lineal solo en dos. <b>Errar el centro cuesta el doble que errar el tamaño o el giro.</b></figcaption>
+    </figure>
+
+    <p>De ahí sale el presupuesto de error. Para quedar dentro del umbral de 10&nbsp;px que usa la métrica:</p>
+
+    <div class="panel">
+      <div class="panel-label">Presupuesto por parámetro</div>
+      <table>
+        <thead>
+          <tr><th>Parámetro</th><th>Tolerancia</th><th>Esquinas que toca</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>centro <code>(tx, ty)</code></td><td class="num">&lt; 10 px</td><td class="num">4 de 4</td></tr>
+          <tr><td>tamaño <code>s</code></td><td class="num">&lt; 12 px</td><td class="num">2 de 4</td></tr>
+          <tr><td>ángulo <code>θ</code></td><td class="num">&lt; 4°</td><td class="num">2 de 4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Con un tamaño típico de 160&nbsp;px, esos 10&nbsp;px son <strong>6&nbsp;% de precisión</strong>. Por eso el primer lugar va en 0.475 y no en 0.9.</p>
+  </section>
+
+  <!-- 5 ----------------------------------------------------------------- -->
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Dónde está la señal</h2></div>
+
+    <p>Si el cuadrado no se ve en la imagen, ¿de dónde sale? Del contenido del propio volumen.</p>
+
+    <p>Promediando el volumen a lo largo del eje de profundidad se obtiene una vista <em>en-face</em>: la retina vista desde arriba, igual que el microscopio. Y ahí aparecen los vasos sanguíneos.</p>
+
+    <div class="pair">
+      <figure>
+        <img class="shot" src="{{FIG_ENFACE}}" alt="Proyección en escala de grises del volumen OCT: se ven vasos sanguíneos oscuros ramificándose y la silueta de un instrumento.">
+        <figcaption>Proyección <em>en-face</em> del volumen. Vasos y la silueta del fórceps.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot" src="{{FIG_OVERLAY}}" alt="La imagen de microscopio con la proyección OCT deformada y superpuesta dentro del cuadrado del escaneo.">
+        <figcaption>La misma proyección, deformada con la matriz real y puesta en su lugar. <b>La silueta del fórceps cae sobre el fórceps real.</b></figcaption>
+      </figure>
+    </div>
+
+    <p>Esa es toda la tarea: <strong>alinear los vasos del OCT con los vasos del microscopio</strong>, y leer de ahí el centro, el giro y el tamaño.</p>
+
+    <div class="callout">
+      <p>El dataset regala supervisión para esto: máscaras de segmentación de vasos en el fundus, y decenas de puntos de vasculatura anotados por caso.</p>
+    </div>
+  </section>
+
+  <!-- 6 ----------------------------------------------------------------- -->
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Lo que sabemos de los datos</h2></div>
+
+    <p>Medido sobre los 1214 casos de entrenamiento, no sobre un puñado.</p>
+
+    <div class="panel">
+      <div class="panel-label">Distribución de los parámetros</div>
+      <table>
+        <thead>
+          <tr><th>Parámetro</th><th>Media</th><th>Desviación</th><th>Rango</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>tamaño <code>s</code></td><td class="num">160.4</td><td class="num">13.7</td><td class="num">126 – 194</td></tr>
+          <tr><td><code>tx</code></td><td class="num">471.9</td><td class="num">125.0</td><td class="num">72 – 883</td></tr>
+          <tr><td><code>ty</code></td><td class="num">467.0</td><td class="num">139.9</td><td class="num">102 – 793</td></tr>
+          <tr><td>ángulo <code>θ</code></td><td class="num">&mdash;</td><td class="num">&mdash;</td><td class="num">círculo completo</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul>
+      <li><strong>Predecir siempre la matriz promedio da exactamente 0.</strong> No hay atajo trivial.</li>
+      <li>El tamaño <strong>no</strong> es constante. Una medición previa sobre un solo escenario daba 217&nbsp;&plusmn;&nbsp;5 y era engañosa; en la población es 160&nbsp;&plusmn;&nbsp;13.7. Hay que predecirlo.</li>
+      <li>Forzar la forma de cuatro perillas <strong>no sale gratis</strong>: deja un residuo de 1.74&nbsp;px, o sea un techo de 0.794. Muy por encima del líder actual, pero es un techo real.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div>Todas las cifras salen de <code>analysis/verify_task2_structure.py</code> sobre los 1214 casos de entrenamiento. Las imágenes son del caso <code>Scenario_01 / 00102</code>.</div>
+    <div>Una advertencia honesta sobre la última figura: el cuadrado y su posición vienen exactos del ground truth, pero la orientación <em>interna</em> de la proyección en-face es una convención que todavía estoy verificando.</div>
+  </footer>
+
+</div>

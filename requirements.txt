@@ -1,0 +1,19 @@
+# torch and torchvision are installed separately, from the CUDA 12.8 index:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+# An RTX 5090 (Blackwell, sm_120) requires PyTorch >= 2.7 with CUDA 12.8.
+# The cu121 and cu124 wheels import cleanly and then fail on the first CUDA call.
+
+numpy
+opencv-python-headless
+pillow
+scipy
+scikit-image
+tqdm
+pyyaml
+einops
+timm
+kornia
+matplotlib
+pandas
+boto3
+pytest

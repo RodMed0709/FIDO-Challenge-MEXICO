@@ -1,0 +1,111 @@
+[scale-augment] factor=[0.81921, 1.22069] source_rows=966
+[epoch 1] train_loss=64.8714 (corner=62.500 heatmap=0.8443 param=0.2686 coord_l1=0.13)
+[epoch 1]   val_corner_auc=0.0000  val_mean_error=128.08px  n=248
+  -> nuevo mejor (auc=0.0000 mean_error=128.08px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 2] train_loss=64.4848 (corner=62.500 heatmap=0.8232 param=0.2225 coord_l1=0.09)
+[epoch 2]   val_corner_auc=0.0000  val_mean_error=122.49px  n=248
+  -> nuevo mejor (auc=0.0000 mean_error=122.49px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 3] train_loss=64.2231 (corner=62.456 heatmap=0.8135 param=0.2205 coord_l1=0.07)
+[epoch 3]   val_corner_auc=0.0000  val_mean_error=111.11px  n=248
+  -> nuevo mejor (auc=0.0000 mean_error=111.11px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 4] train_loss=64.0729 (corner=62.398 heatmap=0.8065 param=0.2101 coord_l1=0.07)
+[epoch 4]   val_corner_auc=0.0000  val_mean_error=90.86px  n=248
+  -> nuevo mejor (auc=0.0000 mean_error=90.86px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 5] train_loss=64.0296 (corner=62.429 heatmap=0.8016 param=0.1804 coord_l1=0.06)
+[epoch 5]   val_corner_auc=0.0000  val_mean_error=111.36px  n=248
+[epoch 6] train_loss=63.9561 (corner=62.450 heatmap=0.7952 param=0.1517 coord_l1=0.06)
+[epoch 6]   val_corner_auc=0.0000  val_mean_error=87.64px  n=248
+  -> nuevo mejor (auc=0.0000 mean_error=87.64px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 7] train_loss=63.7300 (corner=62.302 heatmap=0.7889 param=0.1212 coord_l1=0.05)
+[epoch 7]   val_corner_auc=0.0007  val_mean_error=84.97px  n=248
+  -> nuevo mejor (auc=0.0007 mean_error=84.97px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 8] train_loss=63.6305 (corner=62.237 heatmap=0.7864 param=0.1080 coord_l1=0.05)
+[epoch 8]   val_corner_auc=0.0000  val_mean_error=99.08px  n=248
+[epoch 9] train_loss=63.4127 (corner=62.035 heatmap=0.7849 param=0.0974 coord_l1=0.05)
+[epoch 9]   val_corner_auc=0.0026  val_mean_error=73.43px  n=248
+  -> nuevo mejor (auc=0.0026 mean_error=73.43px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 10] train_loss=63.3748 (corner=62.049 heatmap=0.7810 param=0.0953 coord_l1=0.04)
+[epoch 10]   val_corner_auc=0.0000  val_mean_error=87.82px  n=248
+[epoch 11] train_loss=63.4720 (corner=62.170 heatmap=0.7789 param=0.0902 coord_l1=0.04)
+[epoch 11]   val_corner_auc=0.0000  val_mean_error=77.73px  n=248
+[epoch 12] train_loss=63.2627 (corner=61.996 heatmap=0.7761 param=0.0846 coord_l1=0.04)
+[epoch 12]   val_corner_auc=0.0011  val_mean_error=73.46px  n=248
+[epoch 13] train_loss=63.1847 (corner=61.927 heatmap=0.7745 param=0.0818 coord_l1=0.04)
+[epoch 13]   val_corner_auc=0.0011  val_mean_error=86.51px  n=248
+[epoch 14] train_loss=63.0865 (corner=61.834 heatmap=0.7737 param=0.0815 coord_l1=0.04)
+[epoch 14]   val_corner_auc=0.0000  val_mean_error=91.49px  n=248
+[epoch 15] train_loss=63.0795 (corner=61.846 heatmap=0.7725 param=0.0745 coord_l1=0.04)
+[epoch 15]   val_corner_auc=0.0007  val_mean_error=77.40px  n=248
+[epoch 16] train_loss=62.8850 (corner=61.683 heatmap=0.7704 param=0.0704 coord_l1=0.04)
+[epoch 16]   val_corner_auc=0.0000  val_mean_error=85.01px  n=248
+[epoch 17] train_loss=62.3460 (corner=61.155 heatmap=0.7693 param=0.0723 coord_l1=0.03)
+[epoch 17]   val_corner_auc=0.0015  val_mean_error=79.21px  n=248
+[epoch 18] train_loss=62.8881 (corner=61.706 heatmap=0.7673 param=0.0638 coord_l1=0.04)
+[epoch 18]   val_corner_auc=0.0022  val_mean_error=80.77px  n=248
+[epoch 19] train_loss=62.7362 (corner=61.558 heatmap=0.7678 param=0.0699 coord_l1=0.03)
+[epoch 19]   val_corner_auc=0.0011  val_mean_error=91.27px  n=248
+[epoch 20] train_loss=62.4341 (corner=61.279 heatmap=0.7646 param=0.0632 coord_l1=0.03)
+[epoch 20]   val_corner_auc=0.0007  val_mean_error=121.47px  n=248
+[epoch 21] train_loss=62.5118 (corner=61.364 heatmap=0.7652 param=0.0596 coord_l1=0.03)
+[epoch 21]   val_corner_auc=0.0004  val_mean_error=91.36px  n=248
+[epoch 22] train_loss=62.3154 (corner=61.170 heatmap=0.7647 param=0.0625 coord_l1=0.03)
+[epoch 22]   val_corner_auc=0.0026  val_mean_error=83.53px  n=248
+[epoch 23] train_loss=62.2745 (corner=61.132 heatmap=0.7636 param=0.0550 coord_l1=0.03)
+[epoch 23]   val_corner_auc=0.0004  val_mean_error=71.83px  n=248
+[epoch 24] train_loss=62.0443 (corner=60.921 heatmap=0.7625 param=0.0523 coord_l1=0.03)
+[epoch 24]   val_corner_auc=0.0073  val_mean_error=76.14px  n=248
+  -> nuevo mejor (auc=0.0073 mean_error=76.14px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 25] train_loss=62.1461 (corner=61.022 heatmap=0.7620 param=0.0553 coord_l1=0.03)
+[epoch 25]   val_corner_auc=0.0048  val_mean_error=73.76px  n=248
+[epoch 26] train_loss=62.0814 (corner=60.978 heatmap=0.7612 param=0.0527 coord_l1=0.03)
+[epoch 26]   val_corner_auc=0.0015  val_mean_error=71.52px  n=248
+[epoch 27] train_loss=61.7099 (corner=60.584 heatmap=0.7622 param=0.0508 coord_l1=0.03)
+[epoch 27]   val_corner_auc=0.0018  val_mean_error=68.28px  n=248
+[epoch 28] train_loss=61.9001 (corner=60.785 heatmap=0.7613 param=0.0500 coord_l1=0.03)
+[epoch 28]   val_corner_auc=0.0000  val_mean_error=90.28px  n=248
+[epoch 29] train_loss=62.0963 (corner=60.991 heatmap=0.7594 param=0.0534 coord_l1=0.03)
+[epoch 29]   val_corner_auc=0.0004  val_mean_error=69.00px  n=248
+[epoch 30] train_loss=61.2705 (corner=60.172 heatmap=0.7595 param=0.0472 coord_l1=0.03)
+[epoch 30]   val_corner_auc=0.0037  val_mean_error=76.47px  n=248
+[epoch 31] train_loss=61.6549 (corner=60.558 heatmap=0.7596 param=0.0464 coord_l1=0.03)
+[epoch 31]   val_corner_auc=0.0000  val_mean_error=95.61px  n=248
+[epoch 32] train_loss=61.4960 (corner=60.398 heatmap=0.7589 param=0.0427 coord_l1=0.03)
+[epoch 32]   val_corner_auc=0.0015  val_mean_error=91.94px  n=248
+[epoch 33] train_loss=61.1307 (corner=60.055 heatmap=0.7572 param=0.0428 coord_l1=0.03)
+[epoch 33]   val_corner_auc=0.0026  val_mean_error=88.35px  n=248
+[epoch 34] train_loss=61.3273 (corner=60.239 heatmap=0.7577 param=0.0444 coord_l1=0.03)
+[epoch 34]   val_corner_auc=0.0018  val_mean_error=93.23px  n=248
+[epoch 35] train_loss=61.1554 (corner=60.088 heatmap=0.7574 param=0.0445 coord_l1=0.03)
+[epoch 35]   val_corner_auc=0.0000  val_mean_error=96.61px  n=248
+[epoch 36] train_loss=61.1868 (corner=60.120 heatmap=0.7576 param=0.0425 coord_l1=0.03)
+[epoch 36]   val_corner_auc=0.0033  val_mean_error=83.97px  n=248
+[epoch 37] train_loss=61.1690 (corner=60.105 heatmap=0.7568 param=0.0456 coord_l1=0.03)
+[epoch 37]   val_corner_auc=0.0000  val_mean_error=103.06px  n=248
+[epoch 38] train_loss=61.5201 (corner=60.440 heatmap=0.7565 param=0.0423 coord_l1=0.03)
+[epoch 38]   val_corner_auc=0.0092  val_mean_error=77.60px  n=248
+  -> nuevo mejor (auc=0.0092 mean_error=77.60px), guardado en checkpoints/task2_scale_aug/model_1.pth
+[epoch 39] train_loss=61.0888 (corner=60.009 heatmap=0.7566 param=0.0412 coord_l1=0.03)
+[epoch 39]   val_corner_auc=0.0018  val_mean_error=101.59px  n=248
+[epoch 40] train_loss=60.4348 (corner=59.372 heatmap=0.7559 param=0.0423 coord_l1=0.03)
+[epoch 40]   val_corner_auc=0.0070  val_mean_error=69.56px  n=248
+[epoch 41] train_loss=60.5729 (corner=59.520 heatmap=0.7561 param=0.0387 coord_l1=0.03)
+[epoch 41]   val_corner_auc=0.0000  val_mean_error=133.03px  n=248
+[epoch 42] train_loss=60.0939 (corner=59.041 heatmap=0.7561 param=0.0407 coord_l1=0.03)
+[epoch 42]   val_corner_auc=0.0048  val_mean_error=66.91px  n=248
+[epoch 43] train_loss=60.8684 (corner=59.813 heatmap=0.7547 param=0.0381 coord_l1=0.03)
+[epoch 43]   val_corner_auc=0.0062  val_mean_error=75.55px  n=248
+[epoch 44] train_loss=61.0060 (corner=59.946 heatmap=0.7554 param=0.0408 coord_l1=0.03)
+[epoch 44]   val_corner_auc=0.0029  val_mean_error=89.02px  n=248
+[epoch 45] train_loss=60.0126 (corner=58.966 heatmap=0.7544 param=0.0343 coord_l1=0.03)
+[epoch 45]   val_corner_auc=0.0048  val_mean_error=78.51px  n=248
+[epoch 46] train_loss=60.3496 (corner=59.299 heatmap=0.7545 param=0.0404 coord_l1=0.03)
+[epoch 46]   val_corner_auc=0.0059  val_mean_error=89.58px  n=248
+[epoch 47] train_loss=59.7588 (corner=58.723 heatmap=0.7543 param=0.0341 coord_l1=0.02)
+[epoch 47]   val_corner_auc=0.0066  val_mean_error=69.57px  n=248
+[epoch 48] train_loss=59.6374 (corner=58.597 heatmap=0.7549 param=0.0380 coord_l1=0.02)
+[epoch 48]   val_corner_auc=0.0040  val_mean_error=94.93px  n=248
+[epoch 49] train_loss=59.7123 (corner=58.670 heatmap=0.7541 param=0.0363 coord_l1=0.03)
+[epoch 49]   val_corner_auc=0.0033  val_mean_error=91.99px  n=248
+[epoch 50] train_loss=60.2891 (corner=59.238 heatmap=0.7550 param=0.0353 coord_l1=0.03)
+[epoch 50]   val_corner_auc=0.0026  val_mean_error=85.67px  n=248
+Mejor AUC: 0.0092 en epoca 38

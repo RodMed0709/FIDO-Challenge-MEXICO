@@ -1,0 +1,12 @@
+id: f-piso-trivial-distance-auc
+tipo: fact
+titulo: Piso trivial de `distance_auc` en Task 1
+ambito: metrica
+valor: 0.0445
+medido_el: '2026-08-15'
+medido_con: analysis/explore_task1_gt.py — mejor constante posible, 159.2 px
+revisar_si: cambia el conjunto de evaluación
+vida_util_dias: 365
+notas: 'Superar esto no es habilidad: es la referencia mínima. Aporta 0.0134 al score final
+  (peso 0.3).'
+historial: []

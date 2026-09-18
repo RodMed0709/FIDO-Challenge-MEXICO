@@ -1,0 +1,356 @@
+<title>FIDO Ground Truth Atlas</title>
+<style>
+  :root{
+    --bg:#F2F5F7; --surface:#FFFFFF; --surface-2:#E8EDF1; --border:#D3DBE1;
+    --text:#12181F; --text-dim:#56636F;
+    --accent:#0E7C86; --accent-soft:#E4F4F5;
+    --amber:#C98A0E; --amber-soft:#FFF6E5; --amber-border:#F0C878;
+    --pink:#D6335A; --blue:#0E6E96;
+    --violet:#6E4FD1; --violet-soft:#EFEAFC; --violet-border:#CBBBF2;
+    --slate:#5B6672; --slate-soft:#EAEDF0; --slate-border:#C7CFD6;
+    --radius:10px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0B0F14; --surface:#121821; --surface-2:#1A222D; --border:#26313D;
+      --text:#EAF0F5; --text-dim:#93A4B3;
+      --accent:#3FB5BE; --accent-soft:rgba(63,181,190,.12);
+      --amber:#FFD166; --amber-soft:rgba(255,209,102,.08); --amber-border:#7A5A12;
+      --pink:#EF476F; --blue:#118AB2;
+      --violet:#B8A6F7; --violet-soft:rgba(184,166,247,.12); --violet-border:#5A4A96;
+      --slate:#A9B4BE; --slate-soft:rgba(169,180,190,.1); --slate-border:#3A4552;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0B0F14; --surface:#121821; --surface-2:#1A222D; --border:#26313D;
+    --text:#EAF0F5; --text-dim:#93A4B3;
+    --accent:#3FB5BE; --accent-soft:rgba(63,181,190,.12);
+    --amber:#FFD166; --amber-soft:rgba(255,209,102,.08); --amber-border:#7A5A12;
+    --pink:#EF476F; --blue:#118AB2;
+    --violet:#B8A6F7; --violet-soft:rgba(184,166,247,.12); --violet-border:#5A4A96;
+    --slate:#A9B4BE; --slate-soft:rgba(169,180,190,.1); --slate-border:#3A4552;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:64px 28px 120px;}
+
+  h1,h2,h3{
+    font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+    font-weight:600; text-wrap:balance; margin:0;
+  }
+  .mono{
+    font-family:ui-monospace,"Cascadia Code","SF Mono",Consolas,"Liberation Mono",monospace;
+  }
+
+  header.top{margin-bottom:56px;}
+  .eyebrow{
+    font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); font-weight:700; margin-bottom:14px;
+  }
+  h1{font-size:2.5rem; letter-spacing:-.01em;}
+  .lede{
+    max-width:62ch; color:var(--text-dim); font-size:1.08rem; margin-top:16px;
+  }
+
+  section{margin-top:64px;}
+  .section-head{
+    display:flex; align-items:baseline; gap:14px; margin-bottom:8px;
+    border-bottom:1px solid var(--border); padding-bottom:14px;
+  }
+  .section-head .num{
+    font-family:ui-monospace,"Cascadia Code","SF Mono",Consolas,monospace;
+    color:var(--text-dim); font-size:.85rem;
+  }
+  .section-head h2{font-size:1.5rem;}
+  .section-sub{color:var(--text-dim); max-width:68ch; margin-top:12px; font-size:.98rem;}
+
+  /* --- tabla de modalidades --- */
+  table.modalities{
+    width:100%; border-collapse:collapse; margin-top:28px;
+    font-size:.92rem; background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); overflow:hidden;
+  }
+  table.modalities th, table.modalities td{
+    text-align:left; padding:12px 16px; border-bottom:1px solid var(--border);
+    vertical-align:top;
+  }
+  table.modalities thead th{
+    background:var(--surface-2); font-size:.72rem; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--text-dim); font-weight:700;
+  }
+  table.modalities tbody tr:last-child td{border-bottom:none;}
+  table.modalities td.key{font-weight:600;}
+  table.modalities td .mono{color:var(--text-dim); font-size:.88rem;}
+
+  .callout{
+    margin-top:24px; padding:16px 20px; border-radius:var(--radius);
+    background:var(--amber-soft); border:1px solid var(--amber-border);
+    font-size:.94rem; color:var(--text);
+  }
+  .callout b{color:var(--amber);}
+
+  /* --- panel de imagenes --- */
+  .panel{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px; margin-top:28px;
+  }
+  figure{margin:0; background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); overflow:hidden;}
+  figure img{display:block; width:100%; aspect-ratio:1/1; object-fit:cover; background:var(--surface-2);}
+  figcaption{padding:12px 14px 16px;}
+  figcaption p{margin:8px 0 0; font-size:.86rem; color:var(--text-dim);}
+  figcaption p.marks{margin-top:6px; font-size:.8rem;}
+
+  /* --- badges de las 4 categorías --- */
+  .badge{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; font-weight:700;
+    padding:3px 9px 3px 7px; border-radius:99px; border:1px solid transparent;
+  }
+  .badge::before{content:""; width:7px; height:7px; border-radius:50%; flex:none;}
+  .badge-input{background:var(--accent-soft); color:var(--accent); border-color:var(--accent);}
+  .badge-input::before{background:var(--accent);}
+  .badge-gt{background:var(--violet-soft); color:var(--violet); border-color:var(--violet-border);}
+  .badge-gt::before{background:var(--violet);}
+  .badge-train{background:var(--amber-soft); color:var(--amber); border-color:var(--amber-border);}
+  .badge-train::before{background:var(--amber);}
+  .badge-derived{background:var(--slate-soft); color:var(--slate); border-color:var(--slate-border);}
+  .badge-derived::before{background:var(--slate);}
+
+  .key-row{
+    display:flex; flex-wrap:wrap; gap:10px 20px; margin-top:22px;
+    padding:14px 18px; background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); font-size:.82rem; color:var(--text-dim);
+  }
+  .key-row .item{display:flex; align-items:center; gap:8px;}
+
+  /* --- leyenda de clases --- */
+  .legend{
+    display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:18px;
+    padding:14px 18px; background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); font-size:.86rem;
+  }
+  .legend .chip{display:flex; align-items:center; gap:8px; color:var(--text-dim);}
+  .legend .swatch{width:13px; height:13px; border-radius:3px; flex:none; border:1px solid rgba(0,0,0,.15);}
+
+  footer{
+    margin-top:80px; padding-top:24px; border-top:1px solid var(--border);
+    color:var(--text-dim); font-size:.84rem;
+  }
+  footer .mono{color:var(--text-dim);}
+
+  @media (max-width:640px){
+    .wrap{padding:40px 18px 90px;}
+    h1{font-size:1.9rem;}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">FIDO Challenge · MICCAI 2026 · Codabench 16804</div>
+    <h1>Qué te entrega el dataset, de verdad</h1>
+    <p class="lede">
+      No son mockups. Cada imagen de esta página sale de un caso real del
+      Mock Test — Task 1: <span class="mono">Scenario_11 / frame 04990</span>,
+      Task 2: <span class="mono">Scenario_12 / frame 00031</span> — pasado por
+      el mismo código de geometría que usa el scoring oficial.
+    </p>
+    <div class="key-row">
+      <span class="item"><span class="badge badge-input">Input real</span> el modelo lo recibe, siempre</span>
+      <span class="item"><span class="badge badge-gt">GT real (números)</span> con qué se evalúa — no es una imagen</span>
+      <span class="item"><span class="badge badge-train">Solo entrenamiento</span> existe en el dataset, pero NO se lo dan al modelo en inferencia</span>
+      <span class="item"><span class="badge badge-derived">Dibujado para explicar</span> lo agregué yo encima — no está en ningún archivo del dataset</span>
+    </div>
+  </header>
+
+  <section id="modalidades">
+    <div class="section-head">
+      <span class="num">00</span>
+      <h2>Las dos entradas, en las dos tasks</h2>
+    </div>
+    <p class="section-sub">
+      La firma de inferencia es la misma para ambas tareas —
+      <span class="mono">inference(task_id, oct_volume, opmi_image, model)</span> —
+      pero el volumen OCT cambia de forma según la task. La imagen de
+      microscopio (<span class="mono">opmi_image</span>) es del mismo tipo en
+      las dos: un frame RGB del par estéreo izquierdo, 1024×1024.
+    </p>
+
+    <table class="modalities">
+      <thead>
+        <tr><th>Entrada</th><th>Task 1 — keypoints</th><th>Task 2 — registración</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="key">opmi_image</td>
+          <td><span class="mono">1024×1024×3</span> uint8 RGB<br><span class="mono">Stereo Left/&lt;frame&gt;/microscope.png</span></td>
+          <td><span class="mono">1024×1024×3</span> uint8 RGB — mismo formato</td>
+        </tr>
+        <tr>
+          <td class="key">oct_volume</td>
+          <td><span class="mono">(2, 512, 512)</span> uint8 — 2 B-scans ortogonales<br>puede llegar <span class="mono">None</span> (10% de los casos)</td>
+          <td><span class="mono">(128, 512, 512)</span> uint8 — volumen completo<br>128 slices de un B-scan barrido</td>
+        </tr>
+        <tr>
+          <td class="key">ground truth</td>
+          <td><span class="mono">[x, y, dist·10]</span> — keypoint del fundus + distancia herramienta-tejido</td>
+          <td>matriz <span class="mono">3×3</span> — dónde cayó el cuadrado del escaneo iOCT sobre el fundus</td>
+        </tr>
+        <tr>
+          <td class="key">supervisión auxiliar</td>
+          <td colspan="2">
+            máscaras de segmentación (vasos, cánula, endoiluminador, Ilm, Rpe) — SOLO en los datos de
+            entrenamiento. En inferencia real el modelo recibe <b>nada más que</b>
+            <span class="mono">opmi_image</span> + <span class="mono">oct_volume</span> crudos:
+            las segmentaciones que ves abajo son terreno de entrenamiento, no un input del modelo.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="task1">
+    <div class="section-head">
+      <span class="num">01</span>
+      <h2>Task 1 — dónde está la cánula, y a qué distancia del tejido</h2>
+    </div>
+    <p class="section-sub">
+      El keypoint (círculo rojo) marca la punta de la <b>cánula</b> sobre el
+      fundus — nunca el endoiluminador, aunque las dos herramientas estén en
+      escena. La distancia no se anota como un punto: se mide entre dos capas
+      del B-scan.
+    </p>
+
+    <div class="panel">
+      <figure>
+        <img src="{{T1_FUNDUS}}" alt="Fundus limpio, Task 1">
+        <figcaption>
+          <span class="badge badge-input">Input real</span>
+          <p><span class="mono">opmi_image</span> — el microscopio tal cual llega, sin ninguna marca encima.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="{{T1_KEYPOINT}}" alt="Fundus con el keypoint de la cánula marcado">
+        <figcaption>
+          <span class="badge badge-gt">GT real (números)</span>
+          <p>El dato real es solo <span class="mono">[x, y]</span> en el JSON — dos números. El <b style="color:#ff5252">círculo/cruz rojos</b> son míos, para que se vea dónde caen esos dos números sobre el fundus de arriba.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="{{T1_BSCAN_RAW}}" alt="B-scan crudo de OCT">
+        <figcaption>
+          <span class="badge badge-input">Input real</span>
+          <p><span class="mono">oct_volume[0]</span> — uno de los 2 B-scans que sí recibe el modelo. Corte transversal de la retina, sin colorear, tal cual llega.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="{{T1_BSCAN_SEG}}" alt="B-scan segmentado con la distancia medida">
+        <figcaption>
+          <span class="badge badge-train">Solo entrenamiento</span>
+          <p>Los <b>colores de relleno</b> (ámbar/rosa/azul/gris) son una máscara de clase que solo viene en train — el modelo NO la recibe en competencia. El <b style="color:#fff;-webkit-text-stroke:.5px #333">círculo blanco</b>, la <b style="color:#fff;-webkit-text-stroke:.5px #333">línea blanca</b> y el texto son míos: marco el píxel de la cánula que detecté, y mido el hueco hasta la capa ámbar (Ilm).</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="legend">
+      <span class="chip"><span class="swatch" style="background:#FFD166"></span>Ilm (capa de la retina)</span>
+      <span class="chip"><span class="swatch" style="background:#06D6A0"></span>Rpe (otra capa de la retina)</span>
+      <span class="chip"><span class="swatch" style="background:#EF476F"></span>ArteriesOrVeins</span>
+      <span class="chip"><span class="swatch" style="background:#118AB2"></span>InstrumentInOCT (cánula)</span>
+      <span class="chip"><span class="swatch" style="background:#5A5A64"></span>clase 13, no documentada (sombra del instrumento)</span>
+    </div>
+
+    <div class="callout">
+      <b>Por qué me sirve esta imagen aunque el modelo no la reciba:</b> la
+      distancia GT de este frame es <span class="mono">151.6px</span>.
+      Contando a mano el hueco en píxeles entre el círculo blanco (punta de
+      la cánula) y el ámbar (Ilm), y aplicando el ajuste ya verificado
+      <span class="mono">dist = 0.732·pixel_gap + 2.678</span> (R²=0.99 sobre
+      92,012 mediciones), se recupera ese número casi exacto. Por eso mi plan
+      es entrenar un segmentador que produzca ESTOS colores desde el B-scan
+      crudo — y medir la distancia de ahí, en vez de regresarla a ciegas.
+    </div>
+  </section>
+
+  <section id="task2">
+    <div class="section-head">
+      <span class="num">02</span>
+      <h2>Task 2 — dónde cayó el escaneo iOCT sobre el fundus</h2>
+    </div>
+    <p class="section-sub">
+      Acá no hay un punto que marcar: el ground truth es una matriz 3×3 que
+      dice qué cuadrado del fundus corresponde al volumen OCT. Ese cuadrado
+      <b>no está dibujado en ninguna imagen real</b> — es puramente geométrico,
+      hay que reconstruirlo desde el JSON.
+    </p>
+
+    <div class="panel">
+      <figure>
+        <img src="{{T2_FUNDUS}}" alt="Fundus limpio, Task 2">
+        <figcaption>
+          <span class="badge badge-input">Input real</span>
+          <p><span class="mono">opmi_image</span> — así llega en crudo. El cuadrado cian de más abajo NO está dibujado aquí, es la misma imagen sin tocar.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="{{T2_VESSELS}}" alt="Fundus con la máscara de vasos superpuesta">
+        <figcaption>
+          <span class="badge badge-train">Solo entrenamiento</span>
+          <p>El <b style="color:#1fae6e">verde</b> lo pinté yo sobre la máscara de vasos del dataset (un 5.8% del frame) — esa máscara no es input ni GT, es una pista extra que solo viene en train.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="{{T2_ENFACE}}" alt="Proyección en-face del volumen OCT">
+        <figcaption>
+          <span class="badge badge-derived">Derivado del input real</span>
+          <p>Promedié en profundidad los 128 B-scans crudos que sí recibe el modelo (<span class="mono">oct_volume</span>) — no viene calculado así en el dataset, pero solo usa datos que el modelo tiene disponibles.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="{{T2_CROSSHAIR}}" alt="Fundus con el cuadrado GT dibujado a partir de la matriz">
+        <figcaption>
+          <span class="badge badge-gt">GT real (números)</span>
+          <p>El GT real es la <b>matriz 3×3</b> del JSON — nueve números, ninguna imagen. El cuadrado cian y los puntos blancos son míos: proyecté esos números para que se vea qué región del fundus corresponde al escaneo OCT. El modelo nunca ve este cuadrado, tiene que predecir la matriz a ciegas.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="{{T2_OVERLAY}}" alt="En-face deformado sobre el fundus según la matriz GT">
+        <figcaption>
+          <span class="badge badge-derived">Verificación mía, no un dato</span>
+          <p>Deformé el en-face con la matriz GT real y lo pegué sobre el fundus. Si la vasculatura de los dos calza, confirma que leí bien el formato de la matriz — esto no lo usa el modelo, es mi prueba.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="callout">
+      <b>¿Contra qué se evalúa una predicción de Task 2?</b> el modelo
+      predice su propia matriz 3×3. El scorer toma las 4 esquinas del
+      cuadrado unitario, las proyecta con TU matriz y con la matriz GT real,
+      y mide qué tan lejos cae cada esquina — eso es exactamente lo que
+      dibuja la imagen del cuadrado cian de arriba, es la comparación
+      geométrica en sí. Como el cuadrado no está renderizado en ninguna
+      imagen real, no hay atajo visual — pero la matriz sí es casi siempre
+      una <i>similitud reflejada</i> de 4 grados de libertad (posición,
+      ángulo, escala, con reflexión fija), verificada sobre los 1214 casos de
+      entrenamiento. Eso reduce "encontrar una homografía arbitraria" a
+      estimar 4 números.
+    </div>
+  </section>
+
+  <footer>
+    Generado desde datos reales del Mock Test local —
+    <span class="mono">data/Mock Test/Task 1/Scenario_11/04990</span> y
+    <span class="mono">data/Mock Test/Task 2/Scenario_12/00031</span> —
+    con <span class="mono">analysis/render_task1_figures.py</span> y
+    <span class="mono">analysis/render_task2_figures.py</span>. Colores de
+    clase tomados directamente del enum <span class="mono">GenericLabels</span>
+    vendorizado, no inventados.
+  </footer>
+
+</div>

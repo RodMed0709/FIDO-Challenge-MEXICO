@@ -1,0 +1,11 @@
+id: f-ram-pod
+tipo: fact
+titulo: RAM del pod
+ambito: entorno
+valor: 187
+unidad: GB
+medido_el: '2026-08-17'
+medido_con: free -g en el pod
+revisar_si: se recrea el pod con otro tipo de instancia
+vida_util_dias: 7
+historial: []

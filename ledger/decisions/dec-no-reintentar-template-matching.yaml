@@ -1,0 +1,17 @@
+id: dec-no-reintentar-template-matching
+tipo: decision
+titulo: No reintentar template matching clásico sobre vasos (Task 2)
+estado: vigente
+decision: El peldaño 20 queda cerrado. No se vuelve a intentar bajo ninguna variante morfológica
+  simple.
+porque: 'Refutado con evidencia oráculo, no por un bug: con los parámetros REALES del GT (sin
+  búsqueda) el NCC entre el patch alineado y el fundus es ≈0 en los 4 casos (-0.0072, 0.0462,
+  -0.0116, 0.0001). El caso sintético autoconsistente pasa con 0.09 px de error, así que la
+  cadena es matemáticamente correcta: la señal no existe.'
+revisar_si: aparece una representación de la señal de vaso que no sea una transformación morfológica
+  simple del `enface_vessel_density` — por ejemplo probabilidades de vaso aprendidas, o combinar
+  con la silueta del instrumento, que sigue sin explotarse
+evidencia: []
+decidido_el: '2026-08-17'
+vida_util_dias: 90
+historial: []

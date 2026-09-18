@@ -1,0 +1,17 @@
+id: def-t2-plantilla-4a1
+tipo: defect
+titulo: Plantilla 4:1 comparada contra una huella cuadrada
+estado: cerrado
+severidad: alta
+donde: 'src/fido/models/task2_baseline.py :: encoder del en-face'
+sintoma: Plantilla de 8×32 celdas (128 slices × 512 A-scans) contra una huella real de ~160×160
+  px = 10×10 celdas.
+evidencia: 'El GT es una similitud con ortogonalidad 100%: la región de retina cubierta es
+  cuadrada, el muestreo es anisótropo.'
+impacto: La correlación comparaba geometrías incompatibles.
+afecta:
+- run-2026-08-17-p30-t2-baseline-roto
+abierto_el: '2026-08-17'
+cerrado_el: '2026-08-17'
+resuelto_por: 'Peldaño 40: remuestrear el en-face a `SCALE_REF²` antes del encoder.'
+historial: []

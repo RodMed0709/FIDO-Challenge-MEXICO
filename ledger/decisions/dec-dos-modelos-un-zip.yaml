@@ -1,0 +1,14 @@
+id: dec-dos-modelos-un-zip
+tipo: decision
+titulo: Dos modelos independientes en un solo zip
+estado: vigente
+decision: '`model_0.pth` para Task 1 y `model_1.pth` para Task 2; `inference(task_id, ...)`
+  ramifica.'
+porque: El formato lo permite y no hay incentivo de empaquetado para compartir backbone entre
+  tareas heterogéneas; sí hay riesgo de interferencia.
+revisar_si: el contrato de entrega cambia, o aparece evidencia de transferencia útil entre
+  tasks
+evidencia: []
+decidido_el: '2026-08-14'
+vida_util_dias: 60
+historial: []

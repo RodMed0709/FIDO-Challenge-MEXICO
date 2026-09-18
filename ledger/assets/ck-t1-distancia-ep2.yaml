@@ -1,0 +1,15 @@
+id: ck-t1-distancia-ep2
+tipo: asset
+titulo: Task 1 — distancia, época 2 (AUC 0.5681)
+clase: checkpoint
+ruta: /workspace/checkpoints_backup/model_0_auc0.5681_ep2.pth
+host: pod:<POD_ID>
+task: 1
+componente: distancia
+activo: true
+efimero: true
+existe: desconocido
+producido_por: run-2026-08-17-p10-t1-distancia
+notas: 'Respaldo tomado antes de que una corrida posterior lo sobrescribiera. No está en `experiments/*/runs/`
+  de este repo: hay que bajarlo del pod.'
+historial: []

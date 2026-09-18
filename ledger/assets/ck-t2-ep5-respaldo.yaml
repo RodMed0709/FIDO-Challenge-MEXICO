@@ -1,0 +1,15 @@
+id: ck-t2-ep5-respaldo
+tipo: asset
+titulo: Task 2 — respaldo de la época 5 (baseline roto)
+clase: checkpoint
+ruta: /workspace/checkpoints_backup/model_1_ep5_err203px.pth
+host: pod:<POD_ID>
+task: 2
+componente: registracion
+activo: false
+efimero: true
+existe: desconocido
+producido_por: run-2026-08-17-p30-t2-baseline-roto
+notas: 'Es el PEOR de los cinco checkpoints evaluados de esa corrida: lo guardó `def-checkpoint-guarda-el-peor`.
+  Se conserva como cicatriz, no como candidato.'
+historial: []
